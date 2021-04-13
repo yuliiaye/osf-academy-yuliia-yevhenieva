@@ -1,10 +1,10 @@
 'use strict';
  
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var uglifycss = require('gulp-uglifycss');
+let gulp = require('gulp');
+let sass = require('gulp-sass');
+let uglifycss = require('gulp-uglifycss');
  
-//sass.compiler = require('node-sass');
+sass.compiler = require('node-sass');
  
 gulp.task('sass', function () {
   return gulp.src('./scss/*.scss')
@@ -13,7 +13,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('css', function () {
-    gulp.src('./css/*.css')
+    return gulp.src('./css/*.css')
       .pipe(uglifycss({
         "maxLineLen": 80,
         "uglyComments": true
@@ -21,11 +21,11 @@ gulp.task('css', function () {
       .pipe(gulp.dest('./dist/'));
   });
 
-gulp.task('run', ['sass', 'css']);
+gulp.task('run', gulp.series('sass', 'css'));
 
 gulp.task('watch', function () {
-    gulp.watch('./scss/*.scss', ['sass']);
-    gulp.watch('./css/*.css', ['css']);
+    gulp.watch('./scss/*.scss', gulp.series('sass'));
+    gulp.watch('./css/*.css', gulp.series('css'));
 })
 
-gulp.task('default', ['run', 'watch']);
+gulp.task('default', gulp.series('run', 'watch'));
