@@ -1,1 +1,3 @@
-.container{display:flex;flex-direction:row;justify-content:space-between}
+.container,.header-nav{display:flex;flex-direction:row;justify-content:space-around}
+.nav-item{color:#45413e;font-size:.8rem;font-family:'Lato',sans-serif;margin:auto 23px;text-decoration:none}
+.separator{display:inline-block;width:14px}.nav-item:last-child{margin-right:0}

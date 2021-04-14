@@ -5,38 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="HandheldFriendly" content="true">
-    <link rel="stylesheet" href="./dist/main.css">
-    <script src="https://kit.fontawesome.com/2a9104abd7.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/main.css">
+
+    <script src="https://kit.fontawesome.com/2a9104abd7.js" crossorigin="anonymous"></script>
+
     <title>OSF Academy</title>
 </head>
 <body>
     <header class="container">
             <div class="header-logo">
-                <a href="#"><img src="" alt=""><img src="./images/logo.png" alt="logo"></a>
+                <a href="#"><img src="./images/logo.png" alt="logo"></a>
             </div>
             <nav class="header-nav">
-                    <div>
-                        <button>
-                            <span>SERVICES</span>
+                    <div class="nav-item">
+                        <span class="nav-item-active">SERVICES
+                            <span class="separator"></span>
                             <i class="fas fa-sort-down"></i>
-                        </button>
+                        </span>
                     </div>
-                    <a>COMPANY</a>
-                    <a>LIBRARY</a>
-                    <a>CONTACT US</a>
-                    <div>
-                        <span>EN</span>
+                    <a href="#" class="nav-item">COMPANY</a>
+                    <a href="#" class="nav-item">LIBRARY</a>
+                    <a href="#" class="nav-item">CONTACT US</a>
+                    <a href="#" class="nav-item">
+                        <span>EN</span><span class="separator"></span>
                         <i class="fas fa-sort-down"></i>
-                    </div>
-                    <div>
-                        <span>&#36; US</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <span>&#36; US</span><span class="separator"></span>
                         <i class="fas fa-sort-down"></i>
-                    </div>
-                    <i class="fas fa-search"></i>
-                    <i class="far fa-user"></i>
-                    <i class="far fa-heart"></i>
-                    <i class="fas fa-shopping-bag"></i>
+                    </a>
+                    <i class="fas fa-search nav-item"></i>
+                    <i class="far fa-user nav-item"></i>
+                    <i class="far fa-heart nav-item"></i>
+                    <i class="fas fa-shopping-bag nav-item"></i>
                 </ul>
             </nav>
     </header>

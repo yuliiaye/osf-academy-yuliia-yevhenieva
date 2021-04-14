@@ -1,8 +1,18 @@
-.container {
+.container, .header-nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-around; }
 
-.header-nav {
-  display: flex;
-  flex-direction: row; }
+.nav-item {
+  color: #45413e;
+  font-size: 0.8rem;
+  font-family: 'Lato', sans-serif;
+  margin: auto 23px;
+  text-decoration: none; }
+
+.separator {
+  display: inline-block;
+  width: 14px; }
+
+.nav-item:last-child {
+  margin-right: 0; }
