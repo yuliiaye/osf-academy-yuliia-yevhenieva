@@ -1,3 +1,10 @@
 .container,.header-nav{display:flex;flex-direction:row;justify-content:space-around}
-.nav-item{color:#45413e;font-size:.8rem;font-family:'Lato',sans-serif;margin:auto 23px;text-decoration:none}
-.separator{display:inline-block;width:14px}.nav-item:last-child{margin-right:0}
+body{min-width:1280px}.container{margin-top:13px}.header-nav{height:65px}.nav-item,.dropdown{color:#45413e;font-size:14px;font-family:'Lato',sans-serif;margin:0 auto;padding:20px 35px 32px 35px;text-decoration:none}
+.separator{display:inline-block;width:10px}.arrow{position:relative;bottom:2px}.nav-item:hover{color:#fff;background-color:#262a32;background-size:cover;border-bottom:3px solid #84bc22}
+.dropdown-content{display:none;position:absolute;left:0;top:78px;height:384px;width:100%;min-width:1280px;background-color:#262a32;box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);z-index:1}
+.dropdown-content *{color:#fff;text-decoration:none}.dropdown-content a:hover{text-decoration:underline}
+.dropdown:hover .dropdown-content{display:flex;flex-direction:column}.drowdown-img{width:273px;height:278px}
+.dropdown:hover .dropdown-content{display:flex;flex-direction:row;justify-content:space-around;align-items:center}
+.dropdown:hover .dropdown-content .dropdown-container{display:flex;flex-direction:column;font-size:14px;flex-basis:auto}
+.dropdown-container a{margin-top:16px}.dropdown-container strong{display:inline-block;position:relative;bottom:18px;font-weight:800}
+.nav-item:last-child{margin-right:0}
