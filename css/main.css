@@ -1,23 +1,35 @@
-.container, .header-nav {
+.header-nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around; }
 
 body {
-  min-width: 1280px; }
+  min-width: 1168px;
+  font-family: 'Lato', sans-serif;
+  margin-left: 56px;
+  margin-right: 56px;
+  box-sizing: border-box; }
 
 .container {
-  margin-top: 13px; }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 13px;
+  margin-left: -56px;
+  margin-right: -56px;
+  padding-left: 56px;
+  padding-right: 56px;
+  border-bottom: 1px solid #f3f0ea; }
 
 .header-nav {
   height: 65px; }
 
 .nav-item, .dropdown {
   color: #45413e;
-  font-size: 14px;
+  font-size: 12px;
   font-family: 'Lato', sans-serif;
   margin: 0 auto;
-  padding: 20px 35px 32px 35px;
+  padding: 25px 23px 32px 23px;
   text-decoration: none; }
 
 .separator {
@@ -27,6 +39,11 @@ body {
 .arrow {
   position: relative;
   bottom: 2px; }
+
+.icons-block * {
+  font-size: 22px;
+  padding-top: 15.5px;
+  padding-bottom: 24.5px; }
 
 .nav-item:hover {
   color: #fff;
@@ -41,7 +58,6 @@ body {
   top: 78px;
   height: 384px;
   width: 100%;
-  min-width: 1280px;
   background-color: #262a32;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1; }
@@ -70,8 +86,8 @@ body {
 .dropdown:hover .dropdown-content .dropdown-container {
   display: flex;
   flex-direction: column;
-  font-size: 14px;
-  flex-basis: auto; }
+  flex-basis: auto;
+  font-size: 14px; }
 
 .dropdown-container a {
   margin-top: 16px; }
@@ -82,5 +98,114 @@ body {
   bottom: 18px;
   font-weight: 800; }
 
-.nav-item:last-child {
-  margin-right: 0; }
+.slider-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 23px; }
+
+.slider-left {
+  color: #fff;
+  height: calc(509px - 80px - 48px);
+  width: calc(873px - 67px);
+  padding-top: 80px;
+  padding-bottom: 48px;
+  padding-left: 67px;
+  background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/carousel.png);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.slider-left h1 {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 50px; }
+
+.slider-left p {
+  font-size: 13px;
+  line-height: 16px; }
+
+.slider-left button {
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: #fff; }
+
+.pagination-wrapper {
+  width: 148px;
+  height: 37px;
+  background: rgba(255, 255, 255, 0); }
+
+.pagination span {
+  display: inline-block;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%; }
+
+.pagination span.active {
+  border: 2px solid #fff; }
+
+.pagination span:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%; }
+
+.slider-right {
+  width: 271px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.slider-right h3 {
+  font-size: 14px; }
+
+.slider-right p {
+  padding: 0 38px;
+  line-height: 13px;
+  font-size: 11px; }
+
+.slider-right button {
+  background-color: #fff;
+  border: 2px solid #3a5b96;
+  color: #3a5b96;
+  padding-bottom: 7px;
+  margin: 0 auto; }
+
+button {
+  font-size: 10px;
+  width: 148px;
+  height: 37px;
+  border-radius: 50px; }
+
+button:focus {
+  outline: 0; }
+
+img[src*="f"] {
+  position: relative;
+  top: 2px;
+  margin-right: 16px; }
+
+.sales-block {
+  color: #fff;
+  height: 336px;
+  background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/palm.png);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
+.sales-block span {
+  font-size: 77px;
+  font-weight: bold; }
+
+.sales-block div {
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 29px; }
