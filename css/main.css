@@ -149,7 +149,8 @@ main {
     background-color: rgba(255, 255, 255, 0);
     border: 2px solid rgba(255, 255, 255, 0.5);
     color: #fff;
-    transition: all 0.2s ease-out; }
+    transition: all 0.2s ease-out;
+    font-family: 'Lato', sans-serif; }
   .slider-left button:hover {
     background-color: rgba(255, 255, 255, 0.5);
     border: 2px solid rgba(255, 255, 255, 0.5);
@@ -221,7 +222,8 @@ main {
     color: #3a5b96;
     padding-bottom: 7px;
     margin: 3px auto;
-    transition: all 0.2s ease-out; }
+    transition: all 0.2s ease-out;
+    font-family: 'Lato', sans-serif; }
     .slider-right button * {
       display: inline-block;
       padding-top: 3px; }
@@ -235,7 +237,8 @@ button {
   width: 148px;
   height: 37px;
   border-radius: 50px;
-  cursor: pointer; }
+  cursor: pointer;
+  font-family: 'Lato', sans-serif; }
 
 button:focus {
   outline: 0; }
@@ -259,65 +262,143 @@ button:focus {
 
 .products-block {
   background-color: #262a32;
-  width: 100%;
+  width: 100vw;
   margin-left: -56px;
-  padding: 50px 56px;
+  padding: 50px 0;
   color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+  .products-block h3 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px 0;
+    display: flex;
+    align-items: center; }
+  .products-block h3::before, .products-block h3::after {
+    content: '';
+    flex: 1;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1); }
+  .products-block h3:not(:empty)::before {
+    margin: 0 3em; }
+  .products-block h3:not(:empty)::after {
+    margin: 0 3em; }
   .products-block .items {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; }
-    .products-block .items .item {
+    flex-wrap: wrap;
+    justify-content: center; }
+    .products-block .items .item, .products-block .items .static-item {
       width: 270px;
       height: 365px;
       background-color: #fff;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: space-between;
       font-size: 13px;
       margin: 15px;
-      border-radius: 10px; }
-      .products-block .items .item div {
-        height: 260px; }
-      .products-block .items .item h4 {
+      border-radius: 10px;
+      position: relative; }
+      .products-block .items .item .img, .products-block .items .static-item .img {
+        height: 260px;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit; }
+      .products-block .items .item #item-1, .products-block .items .static-item #item-1 {
+        background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/item-1.png);
+        background-repeat: no-repeat; }
+      .products-block .items .item #item-2, .products-block .items .static-item #item-2 {
+        background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/item-2.png);
+        background-repeat: no-repeat; }
+      .products-block .items .item #item-3, .products-block .items .static-item #item-3 {
+        background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/item-3.png);
+        background-repeat: no-repeat; }
+      .products-block .items .item #item-4, .products-block .items .static-item #item-4 {
+        background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/item-4.png);
+        background-repeat: no-repeat; }
+      .products-block .items .item #item-5, .products-block .items .static-item #item-5 {
+        background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/item-5.png);
+        background-repeat: no-repeat; }
+      .products-block .items .item #item-6, .products-block .items .static-item #item-6 {
+        background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/item-6.png);
+        background-repeat: no-repeat; }
+      .products-block .items .item #item-7, .products-block .items .static-item #item-7 {
+        background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/item-7.png);
+        background-repeat: no-repeat; }
+      .products-block .items .item h4, .products-block .items .static-item h4 {
         color: #2c3e50;
         margin: 0 auto;
-        padding: 20px; }
-      .products-block .items .item span {
+        padding: 20px;
+        text-align: center; }
+      .products-block .items .item span, .products-block .items .static-item span {
         color: #011847;
-        margin: 0 auto; }
-    .products-block .items #item-1 {
-      background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/item-1.png);
-      background-repeat: no-repeat; }
-    .products-block .items #item-2 {
-      background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/item-2.png);
-      background-repeat: no-repeat; }
-    .products-block .items #item-3 {
-      background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/item-3.png);
-      background-repeat: no-repeat; }
-    .products-block .items #item-4 {
-      background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/item-4.png);
-      background-repeat: no-repeat; }
-    .products-block .items #item-5 {
-      background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/item-5.png);
-      background-repeat: no-repeat; }
-    .products-block .items #item-6 {
-      background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/item-6.png);
-      background-repeat: no-repeat; }
-    .products-block .items #item-7 {
-      background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/item-7.png);
-      background-repeat: no-repeat; }
+        margin: 0 auto;
+        padding-bottom: 20px; }
+    .products-block .items .item .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      bottom: 0;
+      background-image: linear-gradient(90deg, #1cc167 0%, #2ed3a2 100%);
+      border-radius: inherit;
+      z-index: 9;
+      opacity: 0;
+      visibility: hidden;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      justify-content: center;
+      padding: 22px;
+      box-sizing: border-box; }
+      .products-block .items .item .overlay button {
+        background-color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+        margin: 12px;
+        align-self: center; }
+      .products-block .items .item .overlay button:hover {
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        transition: 0.4s; }
+      .products-block .items .item .overlay .addToCart img {
+        width: 29px; }
+      .products-block .items .item .overlay .addToWishlist img {
+        width: 33px; }
+    .products-block .items .item:hover .overlay {
+      opacity: 0.93;
+      visibility: visible; }
+    .products-block .items .static-item {
+      background-image: linear-gradient(to bottom, rgba(220, 89, 135, 0.85), rgba(103, 91, 153, 0.85)), url(/Users/yuliiayevhenieva/envs/osf-academy/images/static-item.png);
+      background-size: cover;
+      background-position-x: right;
+      color: #fff;
+      padding: 22px;
+      box-sizing: border-box;
+      position: relative; }
+      .products-block .items .static-item div {
+        width: 130px;
+        position: absolute;
+        bottom: 22px; }
+        .products-block .items .static-item div p {
+          margin: 8px;
+          line-height: 17px; }
   .products-block button {
     border: 2px solid #e8e2d6;
     background-color: #262a32;
     color: #fff;
     width: 265px;
-    margin: 0 auto; }
+    margin: 34px auto 0;
+    font-family: 'Lato', sans-serif;
+    transition: all .2s ease-out; }
     .products-block button i {
       transform: scale(1, -1); }
+  .products-block button:hover {
+    color: #262a32;
+    background-color: #fff;
+    border: 2px solid #262a32; }
 
 .banner {
   color: #fff;
@@ -335,6 +416,90 @@ button:focus {
     margin-bottom: 42px; }
   .banner p {
     font-size: 12px; }
+
+.latest-posts {
+  background-color: #262a32;
+  width: 100vw;
+  margin-left: -56px;
+  padding: 40px 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .latest-posts h2, .latest-posts p {
+    text-align: center; }
+  .latest-posts h2 {
+    font-weight: bold;
+    font-size: 26px; }
+  .latest-posts .btn {
+    text-align: center;
+    width: 590px;
+    margin: 18px auto; }
+    .latest-posts .btn button {
+      border-radius: 0;
+      border: none;
+      width: 30px;
+      height: 30px;
+      background-color: #2d343a;
+      color: #fff; }
+  .latest-posts h3 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center; }
+  .latest-posts h3::before, .latest-posts h3::after {
+    content: '';
+    flex: 1;
+    border-bottom: 2px solid white; }
+  .latest-posts h3:not(:empty)::before {
+    margin: .5em; }
+  .latest-posts h3:not(:empty)::after {
+    margin: .5em; }
+  .latest-posts .posts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .latest-posts .posts .post {
+      width: 270px;
+      height: 296px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 13px;
+      margin: 15px;
+      border-radius: 10px; }
+      .latest-posts .posts .post .image {
+        height: 190px;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit; }
+      .latest-posts .posts .post #post-1 {
+        background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/product-1.png);
+        background-repeat: no-repeat;
+        background-size: cover; }
+      .latest-posts .posts .post #post-2 {
+        background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/product-2.png);
+        background-repeat: no-repeat;
+        background-size: cover; }
+      .latest-posts .posts .post #post-3 {
+        background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/product-3.png);
+        background-repeat: no-repeat;
+        background-size: cover; }
+      .latest-posts .posts .post #post-4 {
+        background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/product-4.png);
+        background-repeat: no-repeat;
+        background-size: cover; }
+      .latest-posts .posts .post h4 {
+        color: #2c3e50;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center; }
+      .latest-posts .posts .post span {
+        color: #83bc22;
+        margin: 0 auto;
+        padding-bottom: 20px; }
 
 .services {
   background-color: #45413e;
