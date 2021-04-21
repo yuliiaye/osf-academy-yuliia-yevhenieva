@@ -1,0 +1,15 @@
+main{background-color:#f1edea;width:100vw;min-height:100vh;margin-left:-56px;margin-right:-56px;color:#45413e;overflow-x:hidden;padding-left:50px;padding-right:50px;box-sizing:border-box}
+main *{font-family:'Lato',sans-serif}main .breadcrumbs{text-align:center;padding-top:60px}
+main .breadcrumbs a{text-decoration:none;color:#84bc22}main h2{font-size:32px;font-weight:bold;text-align:center;padding:30px 0;display:flex;align-items:center}
+main h2::before,main h2::after{content:'';flex:1;border-bottom:2px solid #e5e2df}
+main h2:not(:empty)::before{margin-right:1em}main h2:not(:empty)::after{margin-left:1em}
+main .main-block{padding:80px;margin-bottom:55px;background-color:#fff;display:flex;flex-direction:row;position:relative}
+main .main-block .oops{background-image:url(/Users/yuliiayevhenieva/envs/osf-academy/images/exlamation.png);background-repeat:no-repeat;background-size:cover;position:absolute;top:15%;bottom:0;left:-4%;right:0;background-size:contain;height:365px;width:315px}
+main .main-block span{font-size:82px;font-weight:bold;color:#84bc22;z-index:1;flex-grow:1;align-self:center}
+main .main-block .right-to-oops{display:flex;flex-direction:column;justify-content:space-between;flex-grow:1}
+main .main-block .right-to-oops *{margin:15px}main .main-block .right-to-oops h3{font-size:18px;font-weight:bold;color:#000}
+main .main-block .right-to-oops a{text-decoration:none;color:#84bc22;cursor:pointer}
+main .main-block .right-to-oops p,main .main-block .right-to-oops a{font-size:12px;line-height:20px}
+main .main-block .right-to-oops .input{position:relative;box-sizing:border-box}main .main-block .right-to-oops .input i.fas{position:absolute;top:0;bottom:0;left:0;right:8%;color:#afaead;z-index:1;margin:0;padding-right:40px;padding:9px;transform:scale(-1,1)}
+main .main-block .right-to-oops .input input{border:2px solid #f1edea;border-radius:50px;display:inline-block;padding:7px;width:90%;margin:0}
+main .main-block .right-to-oops .input input:focus{outline:0}

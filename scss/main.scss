@@ -9,10 +9,10 @@ $nav-item-border: #84bc22;
     justify-content: space-around;
 }
 
-html {
-    // width: 1280px;
-    // margin: 0 auto;
-}
+// html {
+//     width: 1280px;
+//     margin: 0 auto;
+// }
 
 body {
     margin: 0 auto;
@@ -24,6 +24,9 @@ body {
     padding-right: 56px;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
+    * {
+        font-family: 'Lato', sans-serif;
+    }
 }
 
 .container {
