@@ -1,1 +1,30 @@
-{"name":"osf-academy-project","description":"responsive website","version":"1.0.0","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"https://github.com/yuliiaye/osf-academy-yuliia-yevhenieva"},"devDependencies":{"gulp":"^4.0.2","gulp-sass":"^4.1.0","gulp-uglify":"^3.0.2","node-sass":"^5.0.0"},"dependencies":{"gulp-uglifycss":"^1.1.0","jquery":"^3.6.0"},"engines":{"node":"15.x"}}
+{
+    "name":"osf-academy-project",
+    "description":"responsive website",
+    "version":"1.0.0",
+    "scripts":
+    {
+        "start":"node index.php"
+    },
+    "repository":
+    {
+        "type":"git",
+        "url":"https://github.com/yuliiaye/osf-academy-yuliia-yevhenieva"
+    },
+    "devDependencies":
+    {
+        "gulp":"^4.0.2",
+        "gulp-sass":"^4.1.0",
+        "gulp-uglify":"^3.0.2",
+        "node-sass":"^5.0.0"
+    },
+    "dependencies":
+    {
+        "gulp-uglifycss":"^1.1.0",
+        "jquery":"^3.6.0"
+    },
+    "engines":
+    {
+        "node":"15.x"
+    }
+}
