@@ -1,7 +1,6 @@
 $nav-font:rgb(69, 65, 62);
 $nav-items-bgd: #262a32;
 $nav-item-border: #84bc22;
-// $padding: calc((65px - 0.9rem)/2);
 
 %flexy {
     display: flex;
@@ -152,19 +151,46 @@ i {
     font-weight: 800;
 }
 
-// .nav-item:first-child .nav-item-active{
-//     display: inline-block;
-//     box-sizing: border-box;
-//     padding-left: $padding;
-//     padding-right: $padding;
-//     padding-top: 11px;
-//     vertical-align: middle;
-//     border-top: 17px solid #fff;
-// }
+.dropdown-small {
+    position: relative;
+}
 
-// .nav-item:last-child {
-//     padding-right: 5px;
-// }
+.dropdown-content-small {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 68px;
+    left: 0;
+    background-color: $nav-items-bgd;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    * {
+        color: #fff;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #83bc22;
+        transition:0.4s;
+    }
+}
+
+.dropdown-small:hover .dropdown-content-small {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    .dropdown-container-small {
+        display: flex;
+        flex-direction: column;
+        flex-basis: auto;
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+}
+
+.dropdown-container-small a {
+    margin-top: 16px;
+}
 
 main {
     padding-top: 81px;
@@ -187,7 +213,7 @@ main {
     padding-bottom: 48px;
     padding-left: 67px;
     padding-right: 67px;
-    background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/carousel.png);
+    background-image: url(../images/carousel.png);
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -219,8 +245,8 @@ main {
 //***************for slider****************
 
 .slider-left.central {
+    background-image: url(../images/carousel-2.png);
     h1, p {
-        background-image: url();
         text-align: center;
     }
     button {
@@ -229,8 +255,8 @@ main {
 }
 
 .slider-left.right {
+    background-image: url(../images/carousel-3.png);
     h1, p {
-        background-image: url();
         text-align: right;
         
     }
@@ -331,7 +357,7 @@ button:focus {
 .sales-block {
     color: #fff;
     height: 336px;
-    background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/palm.png);
+    background-image: url(../images/palm.png);
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -399,31 +425,31 @@ button:focus {
                 border-top-right-radius: inherit;
             }
             #item-1 {
-                background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/item-1.png);
+                background-image: url(../images/item-1.png);
                 background-repeat: no-repeat;
             }
             #item-2 {
-                background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/item-2.png);
+                background-image: url(../images/item-2.png);
                 background-repeat: no-repeat;
             }
             #item-3 {
-                background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/item-3.png);
+                background-image: url(../images/item-3.png);
                 background-repeat: no-repeat;
             }
             #item-4 {
-                background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/item-4.png);
+                background-image: url(../images/item-4.png);
                 background-repeat: no-repeat;
             }
             #item-5 {
-                background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/item-5.png);
+                background-image: url(../images/item-5.png);
                 background-repeat: no-repeat;
             }
             #item-6 {
-                background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/item-6.png);
+                background-image: url(../images/item-6.png);
                 background-repeat: no-repeat;
             }
             #item-7 {
-                background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/item-7.png);
+                background-image: url(../images/item-7.png);
                 background-repeat: no-repeat;
             }
             h4 {
@@ -483,7 +509,7 @@ button:focus {
         .static-item {
             background-image: 
             linear-gradient(to bottom, rgba(220, 89, 135, 0.85), rgba(103,91,153, 0.85)),
-            url(/Users/yuliiayevhenieva/envs/osf-academy/images/static-item.png);
+            url(../images/static-item.png);
             background-size: cover;
             background-position-x: right;
             color: #fff;
@@ -521,7 +547,7 @@ button:focus {
 }
 .banner {
     color: #fff;
-    background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/banner.png);
+    background-image: url(../images/banner.png);
     background-size: cover;
     height: 445px;
     // width: 100%;
@@ -611,22 +637,22 @@ button:focus {
                 // border-radius: inherit;
             }
             #post-1 {
-                background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/product-1.png);
+                background-image: url(../images/product-1.png);
                 background-repeat: no-repeat;
                 background-size: cover;
             }
             #post-2 {
-                background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/product-2.png);
+                background-image: url(../images/product-2.png);
                 background-repeat: no-repeat;
                 background-size: cover;
             }
             #post-3 {
-                background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/product-3.png);
+                background-image: url(../images/product-3.png);
                 background-repeat: no-repeat;
                 background-size: cover;
             }
             #post-4 {
-                background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/product-4.png);
+                background-image: url(../images/product-4.png);
                 background-repeat: no-repeat;
                 background-size: cover;
             }
