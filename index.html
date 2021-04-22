@@ -16,7 +16,7 @@
     <title>OSF Academy</title>
 </head>
 <body>
-    <header class="container">
+    <header class="container" id="container">
             <div class="header-logo">
                 <a href="#"><img src="./images/logo.png" alt="logo"></a>
             </div>
@@ -108,23 +108,44 @@
                 </div>
                 <div class="icons-block">
                     <i class="fas fa-search nav-item"></i>
-                    <i class="far fa-user nav-item"></i>
+                    <i class="far fa-user nav-item" onclick="popup()"></i>
                     <i class="far fa-heart nav-item"></i>
                     <i class="fas fa-shopping-bag nav-item"></i>
                 </div>
             </nav>
     </header>
     <main>
+        <div id="modal-wrapper" ondblclick="popup()">
+            <div class="modal-window">
+                <div class="popup" id="myPopup">
+                    <h2>Sign in</h2>
+                    <div class="labelAndInput">
+                        <label for="email">Email</label>
+                        <input type="email" id="email">
+                    </div>
+                    <div class="labelAndInput">
+                        <label for="password">Lato <a href="id=forgot-psw">forgot password</a></label>
+                        <div class="input">
+                            <i class="far fa-eye" onclick="makeVisible()"></i>
+                            <input type="password" id="password" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&]).{6,}$">
+                        </div>
+                    </div>
+                    <button>LOGIN</button>
+                    <a href="id=create-acc">I don't have an account</a>
+                </div>
+            </div>
+           <div class="popupOverlay"></div>
+        </div>
         <div class="slider-block">
-            <div class="slider-left">
+            <div class="slider-left" id="slider">
                 <h1>Control and manage any<br> device with cloud solutions</h1>
                 <p>Improve business perfomance and user experience<br> with the right mix of IoT technology and processes</p>
                 <button>VIEW MORE</button>
                 <div class="pagination-wrapper">
                     <div class="pagination">
-                      <span class="active"></span>
-                      <span></span>
-                      <span></span>
+                      <span class="active" id="paginationDefault" onclick="sliderDefault()"></span>
+                      <span id="paginationCentral" onclick="sliderCentral()" ></span>
+                      <span id="paginationRight" onclick="sliderRight()"></span>
                     </div>
                   </div>
             </div>
@@ -360,6 +381,6 @@
         </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./script/script.js"></script>
 </body>
 </html>

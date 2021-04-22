@@ -20,7 +20,7 @@
 <body>
     <header class="container">
             <div class="header-logo">
-                <a href="./home.html"><img src="./images/logo.png" alt="logo"></a>
+                <a href="./index.html"><img src="./images/logo.png" alt="logo"></a>
             </div>
             <nav class="header-nav">
                 <div class="nav-item dropdown">
@@ -117,8 +117,29 @@
             </nav>
     </header>
     <main>
+        <div id="modal-wrapper" ondblclick="popup()">
+            <div class="modal-window">
+                <div class="popup" id="myPopup">
+                    <h2>Sign in</h2>
+                    <div class="labelAndInput">
+                        <label for="email">Email</label>
+                        <input type="email" id="email">
+                    </div>
+                    <div class="labelAndInput">
+                        <label for="password">Lato <a href="id=forgot-psw">forgot password</a></label>
+                        <div class="input">
+                            <i class="far fa-eye" onclick="makeVisible()"></i>
+                            <input type="password" id="password" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&]).{6,}$">
+                        </div>
+                    </div>
+                    <button>LOGIN</button>
+                    <a href="id=create-acc">I don't have an account</a>
+                </div>
+            </div>
+           <div class="popupOverlay"></div>
+        </div>
         <div class="breadcrumbs">
-            <a href="./home.html">Home</a> / <span>404</span>
+            <a href="./index.html">Home</a> / <span>404</span>
         </div>
         <h2>404</h2>
         <div class="main-block">
@@ -128,7 +149,7 @@
                 <h3>Sorry, this page could not be found!</h3>
                 <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus at magnis dis parturient montes, nascetur ridiculus mus.<br>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-                <a href="./home.html">Go back to Homepage</a>
+                <a href="./index.html">Go back to Homepage</a>
                 <h3>Search our site</h3>
                 <div class="input">
                     <i class="fas fa-search"></i>
@@ -190,6 +211,6 @@
         </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./script/script.js"></script>
 </body>
 </html>
