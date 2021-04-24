@@ -17,20 +17,20 @@ main {
     main .breadcrumbs a {
       text-decoration: none;
       color: #84bc22; }
-  main h2 {
+  main h2#errPage {
     font-size: 32px;
     font-weight: bold;
     text-align: center;
     padding: 30px 0;
     display: flex;
     align-items: center; }
-  main h2::before, main h2::after {
+  main h2#errPage::before, main h2#errPage::after {
     content: '';
     flex: 1;
     border-bottom: 2px solid #e5e2df; }
-  main h2:not(:empty)::before {
+  main h2#errPage:not(:empty)::before {
     margin-right: 1em; }
-  main h2:not(:empty)::after {
+  main h2#errPage:not(:empty)::after {
     margin-left: 1em; }
   main .main-block {
     padding: 80px;

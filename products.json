@@ -1,0 +1,24 @@
+{
+    "products": [
+        {
+            "name": "RANARP Off-white Pendant lamp",
+            "price": "&#36; 350.99",
+            "imageURL": "../images/item-10.png"
+        },
+        {
+            "name": "STOCKHOLM Walnut Veneer Mirror",
+            "price": "&#36; 118.55",
+            "imageURL": "../images/item-11.png"
+        },
+        {
+            "name": "LEIFARNE White/Balsberget White Swivel Chair",
+            "price": "&#36; 215.99",
+            "imageURL": "../images/item-12.png"
+        },
+        {
+            "name": "Logitech M510 Wireless Computer Mouse for PC Graphite",
+            "price": "&#36; 190.55",
+            "imageURL": "../images/item-13.png"
+        }
+    ]
+}

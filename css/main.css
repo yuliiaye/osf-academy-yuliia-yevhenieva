@@ -12,7 +12,8 @@ body {
   padding-left: 56px;
   padding-right: 56px;
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', sans-serif;
+  color: #45413e; }
   body * {
     font-family: 'Lato', sans-serif; }
 
@@ -157,7 +158,7 @@ main {
   padding-top: 81px;
   min-height: 100vh;
   position: relative; }
-  main #modal-wrapper {
+  main .modal-wrapper {
     visibility: hidden;
     position: fixed;
     display: flex;
@@ -169,18 +170,18 @@ main {
     align-items: center;
     background: rgba(0, 0, 0, 0.7);
     z-index: 11; }
-    main #modal-wrapper .popupOverlay {
+    main .modal-wrapper .popupOverlay {
       position: absolute;
       width: 100%;
       height: 100%;
       z-index: 1; }
-    main #modal-wrapper .modal-window {
+    main .modal-wrapper .modal-window {
       width: 300px;
       height: 500px;
       z-index: 2;
       /* Toggle this class - hide and show the popup */
       /* Add animation (fade in the popup) */ }
-      main #modal-wrapper .modal-window .popup {
+      main .modal-wrapper .modal-window .popup {
         visibility: hidden;
         width: 500px;
         height: 467px;
@@ -200,48 +201,52 @@ main {
         flex-direction: column;
         justify-content: space-between;
         font-size: 13px; }
-        main #modal-wrapper .modal-window .popup h2 {
+        main .modal-wrapper .modal-window .popup h2 {
           text-align: center;
           font-size: 28px;
           font-weight: bold; }
-        main #modal-wrapper .modal-window .popup .labelAndInput {
-          width: 100%;
-          height: 20%;
-          margin: 15px;
-          margin-left: 0; }
-          main #modal-wrapper .modal-window .popup .labelAndInput label {
-            display: block;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            position: relative; }
-            main #modal-wrapper .modal-window .popup .labelAndInput label a {
-              position: absolute;
-              right: 0; }
-          main #modal-wrapper .modal-window .popup .labelAndInput .input {
-            position: relative;
-            box-sizing: border-box; }
-            main #modal-wrapper .modal-window .popup .labelAndInput .input i.far {
-              position: absolute;
-              top: 33%;
-              right: 3%;
-              color: #afaead;
-              z-index: 1;
-              margin: 0; }
-          main #modal-wrapper .modal-window .popup .labelAndInput input {
-            border: 2px solid rgba(69, 65, 62, 0.2);
-            border-radius: 50px;
-            text-align: center;
-            height: 38px;
-            width: 100%; }
-        main #modal-wrapper .modal-window .popup button {
-          margin: auto;
-          background-color: #84bc22;
-          color: #fff;
-          border: none; }
-        main #modal-wrapper .modal-window .popup a {
+        main .modal-wrapper .modal-window .popup form {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around; }
+          main .modal-wrapper .modal-window .popup form .labelAndInput {
+            width: 100%;
+            height: 20%;
+            margin: 20px;
+            margin-left: 0; }
+            main .modal-wrapper .modal-window .popup form .labelAndInput label {
+              display: block;
+              margin-top: 10px;
+              margin-bottom: 10px;
+              position: relative; }
+              main .modal-wrapper .modal-window .popup form .labelAndInput label a {
+                position: absolute;
+                right: 0; }
+            main .modal-wrapper .modal-window .popup form .labelAndInput .input {
+              position: relative;
+              box-sizing: border-box; }
+              main .modal-wrapper .modal-window .popup form .labelAndInput .input i.far {
+                position: absolute;
+                top: 33%;
+                right: 3%;
+                color: #afaead;
+                z-index: 1;
+                margin: 0; }
+            main .modal-wrapper .modal-window .popup form .labelAndInput input {
+              border: 2px solid rgba(69, 65, 62, 0.2);
+              border-radius: 50px;
+              text-align: center;
+              height: 38px;
+              width: 100%; }
+          main .modal-wrapper .modal-window .popup form button {
+            margin: 20px auto;
+            background-color: #84bc22;
+            color: #fff;
+            border: none; }
+        main .modal-wrapper .modal-window .popup a {
           text-align: center;
           color: #84bc22; }
-      main #modal-wrapper .modal-window .show {
+      main .modal-wrapper .modal-window .show {
         visibility: visible;
         z-index: 2;
         -webkit-animation: fadeIn 0.5s;
@@ -260,6 +265,71 @@ main {
     opacity: 1; } }
   main .darken {
     visibility: visible !important; }
+  main .cookieOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 11;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center; }
+    main .cookieOverlay .cookieBody {
+      display: inline-block;
+      width: 90%;
+      min-height: 150px;
+      padding: 25px;
+      box-sizing: border-box;
+      background-color: white;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      position: relative; }
+      main .cookieOverlay .cookieBody h3 {
+        font-weight: bold;
+        color: #84bc22;
+        margin-bottom: 10px; }
+      main .cookieOverlay .cookieBody p {
+        font-size: 14px;
+        line-height: 21px;
+        width: 80%; }
+      main .cookieOverlay .cookieBody a.close,
+      main .cookieOverlay .cookieBody a.submit {
+        margin-top: 0;
+        display: inline-block;
+        color: white;
+        background-color: #84bc22;
+        text-decoration: none;
+        font-family: sans-serif; }
+        main .cookieOverlay .cookieBody a.close:last-of-type,
+        main .cookieOverlay .cookieBody a.submit:last-of-type {
+          margin-right: 0; }
+      main .cookieOverlay .cookieBody a.close {
+        background-color: #fff;
+        color: #45413e;
+        font-size: 26px;
+        position: absolute;
+        top: 4px;
+        right: 6px; }
+      main .cookieOverlay .cookieBody a.submit {
+        position: absolute;
+        bottom: 25px;
+        right: 25px;
+        padding-top: 10px;
+        box-sizing: border-box;
+        width: 148px;
+        height: 37px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-family: 'Lato', sans-serif;
+        text-align: center; }
 
 .slider-block {
   display: flex;

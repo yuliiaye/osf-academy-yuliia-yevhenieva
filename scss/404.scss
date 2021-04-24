@@ -24,7 +24,7 @@ main {
             color: $green;
         }
     }
-    h2 {
+    h2#errPage {
         font-size: 32px;
         font-weight: bold;
         text-align: center;
@@ -32,15 +32,15 @@ main {
         display: flex;
         align-items: center;     
     }
-    h2::before, h2::after {
+    h2#errPage::before, h2#errPage::after {
         content: '';
         flex: 1;
         border-bottom: 2px solid #e5e2df;
     }
-    h2:not(:empty)::before {
+    h2#errPage:not(:empty)::before {
         margin-right: 1em;
     }
-    h2:not(:empty)::after {
+    h2#errPage:not(:empty)::after {
         margin-left: 1em;
     }
     .main-block {
