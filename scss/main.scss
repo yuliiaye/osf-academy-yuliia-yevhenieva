@@ -92,9 +92,32 @@ i {
 
 .icons-block * {
     color: $grey;
-    font-size: 22px;
+    font-size: 23px;
     padding-top: 15.5px;
     padding-bottom: 24.5px;
+}
+
+.icons-block {
+    .nav-item {
+        position: relative;
+        .count {
+            position: absolute;
+            top: 9px;
+            right: 13px;
+            // display: inline-block;
+            color: $nav-item-border;
+            height: 18px;
+            width: 18px;
+            padding: 0;
+            font-size: 10px;
+            background-color: #fff;
+            text-align: center;
+            padding-top: 1px;
+            box-sizing: border-box;
+            border: 2px solid $nav-item-border;
+            border-radius: 50px;
+        }
+    }
 }
 
 .nav-item:hover {
@@ -625,6 +648,19 @@ button:focus, input:focus {
             #item-2 {
                 background-image: url(../images/item-2.png);
                 background-repeat: no-repeat;
+                // div {
+                //     display: flex;
+                //     flex-direction: row;
+                //     justify-content: center;
+                //     flex-grow: 1;
+                //     margin: 0 auto;
+                //     width: 200px;
+                //     box-sizing: border-box;
+                //     span, button {
+                //         width: 100px;
+                //         box-sizing: border-box;
+                //     }
+                // }
             }
             #item-3 {
                 background-image: url(../images/item-3.png);
@@ -721,7 +757,7 @@ button:focus, input:focus {
             }
         }
     }
-    button {
+    #loadMore {
         border: 2px solid #e8e2d6;
         background-color: #262a32;
         color: #fff;
@@ -733,7 +769,7 @@ button:focus, input:focus {
             transform: scale(1, -1);
         }
     }
-    button:hover {
+    #loadMore:hover {
         color: #262a32;
         background-color: #fff;
         border: 2px solid #262a32;

@@ -2,6 +2,9 @@
 
 $(document).ready(function() {
     
+    $('#cartItem').html($.cookie('productsInCart'));
+    $('#desiredItem').html($.cookie('productsInWishlist'))
+
     const popup = $('.popup');
     const modalWrapper = $('.modal-wrapper');
     $('.fa-user').click(function() {
@@ -15,27 +18,27 @@ $(document).ready(function() {
             modalWrapper.removeClass('darken');
         }
     });
-    $('.fa-eye').click(function(){
+    $('.fa-eye').click(function() {
         const psw = $('#password');
         const type = psw.attr('type') === 'password'?'text':'password';
         psw.attr('type', type);
     })
     
 
-    if( getCookie('popupCookie') != 'submited'){ 
-        if(getCookie('popupCookie') != 'closed' ){
-          $('.cookieOverlay').css("display", "flex").hide().delay(1000).fadeIn();
+    if( getCookie('popupCookie') != 'submited') { 
+        if(getCookie('popupCookie') != 'closed' ) {
+          $('.cookieOverlay').css('display', 'flex').hide().delay(1000).fadeIn();
         }
     }
-    $('a.close').click(function(){
+    $('a.close').click(function() {
         $('.cookieOverlay').fadeOut();
         //sets the coookie to one minute if the popup is closed (whole numbers = days)
-        setCookie( 'popupCookie', 'closed', .00069444444 );
+        setCookie( 'popupCookie', 'closed', .041666666666667 );
     });
-    $('a.submit').click(function(){
+    $('a.submit').click(function() {
         $('.cookieOverlay').fadeOut();
         //sets the coookie to five minutes if the popup is submited (whole numbers = days)
-        setCookie( 'popupCookie', 'submited', .0034722222 );
+        setCookie( 'popupCookie', 'submited', .041666666666667 );
     });
     function getCookie(cname) {
     let name = cname + "=";
@@ -58,24 +61,50 @@ $(document).ready(function() {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     }
 
+    
+    
+    $('button.addToCart').click(function() {
+        let amount = $.cookie('productsInCart');
+        if (!amount) {
+            setCookie( 'productsInCart', 1, .041666666666667 );
+            $('#cartItem').text(1);
+        } else {
+            amount++;
+            setCookie( 'productsInCart', amount, .041666666666667 );
+        }
+        $('#cartItem').text(amount);
+    });
+    $('button.addToWishlist').click(function() {
+        let desired = $.cookie('productsInWishlist');
+        if (!desired) {
+            setCookie( 'productsInWishlist', 1, .041666666666667 );
+            $('#desiredItem').text(1);
+        } else {
+            desired++;
+            setCookie( 'productsInWishlist', desired, .041666666666667 );
+        }
+        $('#desiredItem').text(desired)
+    });
+
+
 
     const slider = $('#slider');
     const pagDef = $('#pagDef');
     const pagCentr = $('#pagCentr');
     const pagRght = $('#pagRght');
-    pagDef.click(function(){
+    pagDef.click(function() {
         pagCentr.removeClass('active');
         pagRght.removeClass('active');
         $(this).addClass('active');
         slider.removeClass('central').removeClass('right');
     })
-    pagCentr.click(function(){
+    pagCentr.click(function() {
         pagDef.removeClass('active');
         pagRght.removeClass('active');
         $(this).addClass('active');
         slider.removeClass('right').addClass('central');
     })
-    pagRght.click(function(){
+    pagRght.click(function() {
         pagDef.removeClass('active');
         pagCentr.removeClass('active');
         $(this).addClass('active');
@@ -84,7 +113,7 @@ $(document).ready(function() {
 
 
 
-    $('#loadMore').click(function(){
+    $('#loadMore').click(function() {
         console.log('button clicked')
         // request
         $.ajax({
@@ -92,12 +121,17 @@ $(document).ready(function() {
             dataType: 'json',
             async: false,
             url: './products.json',
-            success: function (data) {
+            success: function(data) {
                 console.log(data);
+                $('#productsTemplate').tmpl(data.products).appendTo('#productTmpl');
+                $('#loadMore').hide();
             },
             error: function (res) {
                 console.log (res, 'Something went wrong')
             }
         })
     })
+
+
+    $('#currentYear').html(new Date().getFullYear())
 });

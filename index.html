@@ -8,13 +8,29 @@
 
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
     <link rel="stylesheet" href="./dist/main.css">
 
     <script src="https://kit.fontawesome.com/2a9104abd7.js" crossorigin="anonymous" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous"></script>
 
+    <script id="productsTemplate" type='text/x-jquery-tmpl'>
+        <div class="item">
+            <div class="img" id="item-10" style="background-image: url(../images/${imageURL});"></div>
+            <h4>${name}</h4>
+            <span>${price}</span>
+            <div class="overlay">
+                <button class="addToCart">
+                    <img src="./images/plus.png" alt="plus icon">
+                </button>
+                <button class="addToWishlist">
+                    <img src="./images/heart.png" alt="like icon">
+                </button>
+            </div>
+        </div>
+    </script>
     <title>OSF Academy</title>
 </head>
 <body>
@@ -111,8 +127,8 @@
                 <div class="icons-block">
                     <i class="fas fa-search nav-item"></i>
                     <i class="far fa-user nav-item"></i>
-                    <i class="far fa-heart nav-item"></i>
-                    <i class="fas fa-shopping-bag nav-item"></i>
+                    <i class="far fa-heart nav-item"><span class="count" id="cartItem">0</span></i>
+                    <i class="fas fa-shopping-bag nav-item"><span class="count" id="desiredItem">0</span></i>
                 </div>
             </nav>
     </header>
@@ -181,7 +197,7 @@
         </div>
         <div class="products-block">
             <h3>Popular Items</h3>
-            <div class="items">
+            <div class="items" id="productTmpl">
                 <div class="item">
                     <div class="img" id="item-1"></div>
                     <h4>Kristina Dam Oak Table With White Marble Top</h4>
@@ -198,15 +214,19 @@
                 <div class="item">
                     <div class="img" id="item-2"></div>
                     <h4>Hay - About A lounge Chair AAL 93</h4>
-                    <span>&#36; 659.55</span>
-                    <div class="overlay">
+                    <div>
+                        <span>&#36; 659.55</span>
+                        <button>BUY NOW</button>
+                    </div>
+                    
+                    <!-- <div class="overlay">
                         <button class="addToCart">
                             <img src="./images/plus.png" alt="plus icon">
                         </button>
                         <button class="addToWishlist">
                             <img src="./images/heart.png" alt="like icon">
                         </button>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="item">
                     <div class="img" id="item-3"></div>
@@ -279,76 +299,7 @@
                         <p><img src="./images/user.png" alt="">5H AGO</p>
                     </div>
                 </div>
-            </div>
-            <div class="items" id="productsTmpl" style="display: none;">
-                <div class="item productTmpl">
-                    <div class="img" id="item-10" style="background-image: url(${imageURL});"></div>
-                    <h4>
-                        ${name}
-                    </h4>
-                    <span>
-                        ${price}
-                    </span>
-                    <div class="overlay">
-                        <button class="addToCart">
-                            <img src="./images/plus.png" alt="plus icon">
-                        </button>
-                        <button class="addToWishlist">
-                            <img src="./images/heart.png" alt="like icon">
-                        </button>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="img" id="item-11" style="background-image: url(${imageURL});"></div>
-                    <h4>
-                        ${name}
-                    </h4>
-                    <span>
-                        ${price}
-                    </span>
-                    <div class="overlay">
-                        <button class="addToCart">
-                            <img src="./images/plus.png" alt="plus icon">
-                        </button>
-                        <button class="addToWishlist">
-                            <img src="./images/heart.png" alt="like icon">
-                        </button>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="img" id="item-12" style="background-image: url(${imageURL});"></div>
-                    <h4>
-                        ${name}
-                    </h4>
-                    <span>
-                        ${price}
-                    </span>
-                    <div class="overlay">
-                        <button class="addToCart">
-                            <img src="./images/plus.png" alt="plus icon">
-                        </button>
-                        <button class="addToWishlist">
-                            <img src="./images/heart.png" alt="like icon">
-                        </button>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="img" id="item-13" style="background-image: url(${imageURL});"></div>
-                    <h4>
-                        ${name}
-                    </h4>
-                    <span>
-                        ${price}
-                    </span>
-                    <div class="overlay">
-                        <button class="addToCart">
-                            <img src="./images/plus.png" alt="plus icon">
-                        </button>
-                        <button class="addToWishlist">
-                            <img src="./images/heart.png" alt="like icon">
-                        </button>
-                    </div>
-                </div>
+                <div></div>
             </div>
             <button id="loadMore"><span>LOAD MORE</span><span class="separator"></span><i class="fas fa-undo-alt"></i></button>
         </div>

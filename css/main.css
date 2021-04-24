@@ -69,9 +69,27 @@ i {
 
 .icons-block * {
   color: #afaead;
-  font-size: 22px;
+  font-size: 23px;
   padding-top: 15.5px;
   padding-bottom: 24.5px; }
+
+.icons-block .nav-item {
+  position: relative; }
+  .icons-block .nav-item .count {
+    position: absolute;
+    top: 9px;
+    right: 13px;
+    color: #84bc22;
+    height: 18px;
+    width: 18px;
+    padding: 0;
+    font-size: 10px;
+    background-color: #fff;
+    text-align: center;
+    padding-top: 1px;
+    box-sizing: border-box;
+    border: 2px solid #84bc22;
+    border-radius: 50px; }
 
 .nav-item:hover {
   color: #fff;
@@ -523,6 +541,17 @@ button:focus, input:focus {
       .products-block .items .item #item-2, .products-block .items .static-item #item-2 {
         background-image: url(../images/item-2.png);
         background-repeat: no-repeat; }
+        .products-block .items .item #item-2 div, .products-block .items .static-item #item-2 div {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          flex-grow: 1;
+          margin: 0 auto;
+          width: 200px;
+          box-sizing: border-box; }
+          .products-block .items .item #item-2 div span, .products-block .items .item #item-2 div button, .products-block .items .static-item #item-2 div span, .products-block .items .static-item #item-2 div button {
+            width: 100px;
+            box-sizing: border-box; }
       .products-block .items .item #item-3, .products-block .items .static-item #item-3 {
         background-image: url(../images/item-3.png);
         background-repeat: no-repeat; }
@@ -598,7 +627,7 @@ button:focus, input:focus {
         .products-block .items .static-item div p {
           margin: 8px;
           line-height: 17px; }
-  .products-block button {
+  .products-block #loadMore {
     border: 2px solid #e8e2d6;
     background-color: #262a32;
     color: #fff;
@@ -606,9 +635,9 @@ button:focus, input:focus {
     margin: 34px auto 0;
     font-family: 'Lato', sans-serif;
     transition: all .2s ease-out; }
-    .products-block button i {
+    .products-block #loadMore i {
       transform: scale(1, -1); }
-  .products-block button:hover {
+  .products-block #loadMore:hover {
     color: #262a32;
     background-color: #fff;
     border: 2px solid #262a32; }
