@@ -23,24 +23,28 @@ main {
             text-decoration: none;
             color: $green;
         }
+        a:hover {
+            font-weight: bold;
+            color: $nav-font;
+        }
     }
-    h2#errPage {
-        font-size: 32px;
+    h1#pageName {
+        font-size: 38px;
         font-weight: bold;
         text-align: center;
         padding: 30px 0;
         display: flex;
         align-items: center;     
     }
-    h2#errPage::before, h2#errPage::after {
+    h1#pageName::before, h1#pageName::after {
         content: '';
         flex: 1;
         border-bottom: 2px solid #e5e2df;
     }
-    h2#errPage:not(:empty)::before {
+    h1#pageName:not(:empty)::before {
         margin-right: 1em;
     }
-    h2#errPage:not(:empty)::after {
+    h1#pageName:not(:empty)::after {
         margin-left: 1em;
     }
     .main-block {
@@ -51,7 +55,7 @@ main {
         flex-direction: row;
         position: relative;
         .oops {
-            background-image: url(/Users/yuliiayevhenieva/envs/osf-academy/images/exlamation.png);
+            background-image: url(../images/exlamation.png);
             background-repeat: no-repeat;
             background-size: cover;
             // background-position-x: -8%;
@@ -91,7 +95,7 @@ main {
                 cursor: pointer;
             }
             p, a {
-                font-size: 12px;
+                font-size: 14px;
                 line-height: 20px;
             }
             .input {

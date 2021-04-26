@@ -1,24 +1,52 @@
 {
     "products": [
         {
-            "name": "RANARP Off-white Pendant lamp",
+            "id": "8",
+            "name": "RANARP Off-White Pendant lamp",
             "price": "&#36; 350.99",
             "imageURL": "item-10.png"
         },
         {
+            "id": "9",
             "name": "STOCKHOLM Walnut Veneer Mirror",
             "price": "&#36; 118.55",
             "imageURL": "item-11.png"
         },
         {
+            "id": "10",
             "name": "LEIFARNE White/Balsberget White Swivel Chair",
             "price": "&#36; 215.99",
             "imageURL": "item-12.png"
         },
         {
+            "id": "11",
             "name": "Logitech M510 Wireless Computer Mouse for PC Graphite",
             "price": "&#36; 190.55",
             "imageURL": "item-13.png"
+        },
+        {
+            "id": "12",
+            "name": "Contigo Jackson Reusable Water Bottle",
+            "price": "&#36; 100.99",
+            "imageURL": "item-14.png"
+        },
+        {
+            "id": "13",
+            "name": "TINK Vitamin Е&Ferulic Acid",
+            "price": "&#36; 300.55",
+            "imageURL": "item-15.png"
+        },
+        {
+            "id": "14",
+            "name": "ZANZEA Homewear Pajama Sets Silk",
+            "price": "&#36; 222.99",
+            "imageURL": "item-16.png"
+        },
+        {
+            "id": "15",
+            "name": "Activated Charcoal Teeth Whitening Toothpaste",
+            "price": "&#36; 80.99",
+            "imageURL": "item-17.png"
         }
     ]
 }

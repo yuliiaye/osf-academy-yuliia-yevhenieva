@@ -4,6 +4,9 @@ $(document).ready(function() {
     
     $('#cartItem').html($.cookie('productsInCart'));
     $('#desiredItem').html($.cookie('productsInWishlist'))
+    $('.item').append('<div class="overlay"><button class="addToCart"><img src="./images/plus.png" alt="plus icon"></button><button class="addToWishlist"><img src="./images/heart.png" alt="like icon"></button></div>')
+
+
 
     const popup = $('.popup');
     const modalWrapper = $('.modal-wrapper');
@@ -25,19 +28,20 @@ $(document).ready(function() {
     })
     
 
+
     if( getCookie('popupCookie') != 'submited') { 
         if(getCookie('popupCookie') != 'closed' ) {
-          $('.cookieOverlay').css('display', 'flex').hide().delay(1000).fadeIn();
+          $('.cookieOverlay').css('display', 'flex').hide().delay(10000).fadeIn();
         }
     }
     $('a.close').click(function() {
         $('.cookieOverlay').fadeOut();
-        //sets the coookie to one minute if the popup is closed (whole numbers = days)
+        //sets the coookie to one hour if the popup is closed (whole numbers = days)
         setCookie( 'popupCookie', 'closed', .041666666666667 );
     });
     $('a.submit').click(function() {
         $('.cookieOverlay').fadeOut();
-        //sets the coookie to five minutes if the popup is submited (whole numbers = days)
+        //sets the coookie to one hour if the popup is submited (whole numbers = days)
         setCookie( 'popupCookie', 'submited', .041666666666667 );
     });
     function getCookie(cname) {
@@ -62,8 +66,8 @@ $(document).ready(function() {
     }
 
     
-    
-    $('button.addToCart').click(function() {
+
+    $(document).on('click', '.addToCart', function() {
         let amount = $.cookie('productsInCart');
         if (!amount) {
             setCookie( 'productsInCart', 1, .041666666666667 );
@@ -73,8 +77,9 @@ $(document).ready(function() {
             setCookie( 'productsInCart', amount, .041666666666667 );
         }
         $('#cartItem').text(amount);
-    });
-    $('button.addToWishlist').click(function() {
+        console.log('item was added to cart')
+    })
+    $(document).on('click', '.addToWishlist', function() {
         let desired = $.cookie('productsInWishlist');
         if (!desired) {
             setCookie( 'productsInWishlist', 1, .041666666666667 );
@@ -83,8 +88,43 @@ $(document).ready(function() {
             desired++;
             setCookie( 'productsInWishlist', desired, .041666666666667 );
         }
-        $('#desiredItem').text(desired)
+        $('#desiredItem').text(desired);
+        console.log('item was added to cart')
+    })
+
+
+
+    $('#btnGreen').click(function(){
+        let val = $('.inputAmount').val();
+        let amount = $.cookie('productsInCart');
+        if (!amount) {
+            setCookie( 'productsInCart', val, .041666666666667 );
+            $('#cartItem').text(val);
+        } else { 
+            newAmount = parseInt(amount) + parseInt(val);
+            setCookie( 'productsInCart', newAmount, .041666666666667 );
+        }
+        $('#cartItem').text(newAmount);
+        console.log('item was added to cart')
+    })
+
+
+
+    $('#specificItem .img, #specificItem h4, #specificItem #button span:first-child').click(function(e){
+        e.preventDefault();
+        window.location = 'https://my-project-osf.000webhostapp.com/';    
     });
+    
+    $('#viewMore').click(function(e){
+        e.preventDefault();
+        window.location = 'https://my-project-osf.000webhostapp.com/clp.html';    
+    });
+    
+    $('#fb').click(function(e){
+        e.preventDefault();
+        window.location = 'https://www.facebook.com/';    
+    });
+
 
 
 
@@ -93,20 +133,17 @@ $(document).ready(function() {
     const pagCentr = $('#pagCentr');
     const pagRght = $('#pagRght');
     pagDef.click(function() {
-        pagCentr.removeClass('active');
-        pagRght.removeClass('active');
+        $(this).siblings().removeClass('active');
         $(this).addClass('active');
         slider.removeClass('central').removeClass('right');
     })
     pagCentr.click(function() {
-        pagDef.removeClass('active');
-        pagRght.removeClass('active');
+        $(this).siblings().removeClass('active');
         $(this).addClass('active');
         slider.removeClass('right').addClass('central');
     })
     pagRght.click(function() {
-        pagDef.removeClass('active');
-        pagCentr.removeClass('active');
+        $(this).siblings().removeClass('active');
         $(this).addClass('active');
         slider.removeClass('central').addClass('right');
     })
@@ -121,17 +158,71 @@ $(document).ready(function() {
             dataType: 'json',
             async: false,
             url: './products.json',
+
             success: function(data) {
-                console.log(data);
                 $('#productsTemplate').tmpl(data.products).appendTo('#productTmpl');
+                $('.item:nth-child(n + 13)').hide();
                 $('#loadMore').hide();
+                $('#loadMore2').css('display', 'block');
             },
+
             error: function (res) {
                 console.log (res, 'Something went wrong')
             }
         })
     })
+    $('#loadMore2').click(function(){
+        $('.item:nth-child(n + 13)').show();
+        $(this).hide();
+    })
+
+
+
+    $('.posts').slick({
+        prevArrow:$('.btn-left'),
+        nextArrow:$('.btn-right'),
+        autoplay:true,
+        autoplaySpeed: 5000,
+        cssEase:'ease',
+        infinite: true,
+        initialSlide: 0,
+        slidesToShow: 4,
+        slidesPerRow: 4,
+        slidesToScroll: 4,
+        swipe:true,
+        touchMove:true,
+        lazyLoad:'ondemand',
+        pauseOnHover:true,
+        pauseOnFocus:true,
+        responsive: [{
+            breakpoint: 1280,
+            settings: {
+                slidesToShow: 4,
+                infinite: true
+            }
+        }, {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                dots: true
+            }
+        }, {
+            breakpoint: 320,
+            settings: "unslick" // destroys slick
+            }]            
+    });
+
 
 
     $('#currentYear').html(new Date().getFullYear())
+
+
+
+    /////////////////////for mobile adapptiveness\\\\\\\\\\\\\\\\\\\\\\\
+
+    $('.menu-burger__header').click(function() {
+        $('.menu-burger__header').toggleClass('open-menu');
+        $('.header-nav').toggleClass('open-menu');
+        $('body').toggleClass('fixed-page');
+    });
 });

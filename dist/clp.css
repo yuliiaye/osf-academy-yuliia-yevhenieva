@@ -1,0 +1,16 @@
+main{color:#45413e}main h1#pageName::before,main h1#pageName::after{border-bottom:2px solid #fff}
+main .filters{background-color:#fff;border-radius:10px;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between}
+main .filters .filter{flex-grow:1;width:25%;display:flex;flex-direction:row;justify-content:flex-start;padding:40px}
+main .filters .filter>span{margin-right:30px;padding-top:calc((35px - 14px)/2);font-size:14px}
+main .filters #colorDiv .color-picker{display:inline-block;width:max-content;height:max-content;background:rgba(255,255,255,0);align-self:center;cursor:pointer}
+main .filters #colorDiv .color-pagination span{display:inline-block;position:relative;width:14px;height:14px;border-radius:50%;margin:0 4px;box-shadow:1px 1px 4px .5px rgba(0,0,0,0.3)}
+main .filters #colorDiv .color-pagination #white{background:#fff}main .filters #colorDiv .color-pagination #blue{background:#43c0cf}
+main .filters #colorDiv .color-pagination #black{background:#000}main .filters #colorDiv .color-pagination #green{background:#4aaf00}
+main .filters #colorDiv .color-pagination #darkblue{background:#315bbd}main .filters #colorDiv .color-pagination #orange{background:#ec6115}
+main .filters #colorDiv .color-pagination #red{background:#dc041d}main .filters #colorDiv .color-pagination #beige{background:#efead7}
+main .filters #colorDiv .color-pagination span.picked{border:2.5px solid #45413e}
+main .products-block{margin-left:-50px;background-color:rgba(255,255,255,0);padding-top:25px}
+main .products-block>span{color:#45413e;font-size:13px;margin:auto;padding-bottom:15px}
+main button.btnGreen{border:2px solid #d9d9d9;color:#fff;background-color:#84bc22;margin:50px auto 0}
+main select{height:35px;border:2px solid #b6b3b0;border-radius:50px;width:198px}main select option{text-align:center}
+main select:focus{outline:0}
