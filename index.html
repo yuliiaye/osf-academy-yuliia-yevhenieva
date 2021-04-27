@@ -20,7 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js" integrity="sha512-3fMsI1vtU2e/tVxZORSEeuMhXnT9By80xlmXlsOku7hNwZSHJjwcOBpmy+uu+fyWwGCLkMvdVbHkeoXdAzBv+w==" crossorigin="anonymous"></script>
     <script src="https://kenwheeler.github.io/slick/slick/slick.js" type="text/javascript"></script>
-    
+
 
     <script id="productsTemplate" type='text/x-jquery-tmpl'>
         <div class="item">
@@ -181,8 +181,8 @@
 
         <div class="slider-block">
             <div class="slider-left" id="slider">
-                <h1>Control and manage any<br> device with cloud solutions</h1>
-                <p>Improve business perfomance and user experience<br> with the right mix of IoT technology and processes</p>
+                <h1>Control and manage any device with cloud solutions</h1>
+                <p>Improve business perfomance and user experience with the right mix of IoT technology and processes</p>
                 <button id="viewMore">VIEW MORE</button>
                 <div class="pagination-wrapper">
                     <div class="pagination">
@@ -369,7 +369,7 @@
         </div>
         <div class="sitemap">
             <div>
-                <span>CATEGORIES</span>
+                <span id="footerCategories">CATEGORIES</span>
                 <a href="id=a2">Alcohol</a>
                 <a href="id=a3">Art</a>
                 <a href="id=a4">Books</a>
@@ -395,7 +395,7 @@
                 <a href="id=d2">Women's Fashion</a>
             </div>
             <div>
-                <span>ABOUT</span>
+                <span id="footerAbout">ABOUT</span>
                 <a href="id=e1">About us</a>
                 <a href="id=e2">Delivery</a>
                 <a href="id=e3">Testimonials</a>
@@ -409,6 +409,12 @@
             <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-pinterest-p"></i></a>
         </div>
     </footer>
+    <div class="icons-block" id="mob-nav" style="display: none;">
+        <i class="fas fa-search nav-item"></i>
+        <i class="far fa-user nav-item"></i>
+        <i class="far fa-heart nav-item"><span class="count" id="desiredItem">0</span></i>
+        <i class="fas fa-shopping-bag nav-item"><span class="count" id="cartItem">0</span></i>
+    </div>
 
     <script src="./script/script.js" type="text/javascript"></script>
     <script src="./script/scriptMobileVersion.js" type="text/javascript"></script>

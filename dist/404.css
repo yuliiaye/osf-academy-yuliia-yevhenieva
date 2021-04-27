@@ -13,4 +13,5 @@ main .main-block .right-to-oops a{text-decoration:none;color:#84bc22;cursor:poin
 main .main-block .right-to-oops p,main .main-block .right-to-oops a{font-size:14px;line-height:20px}
 main .main-block .right-to-oops .input{position:relative;box-sizing:border-box}main .main-block .right-to-oops .input i.fas{position:absolute;top:0;bottom:0;left:0;right:8%;color:#afaead;z-index:1;margin:0;padding-right:40px;padding:9px;transform:scale(-1,1)}
 main .main-block .right-to-oops .input input{border:2px solid #f1edea;border-radius:50px;display:inline-block;padding:7px;width:90%;margin:0}
-main .main-block .right-to-oops .input input:focus{outline:0}
+main .main-block .right-to-oops .input input:focus{outline:0}@media(min-width:768px) and (max-width:1279px){.main-block{transform:scale(0.8)}
+.main-block .oops{transform:scale(0.8)}.main-block span{transform:scale(0.8)}}
