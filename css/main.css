@@ -3,6 +3,180 @@
   flex-direction: row;
   justify-content: space-around; }
 
+@media (min-width: 1280px) {
+  .modal-wrapper {
+    visibility: hidden;
+    position: fixed;
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin-left: -56px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 11; }
+    .modal-wrapper .popupOverlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1; }
+    .modal-wrapper .modal-window {
+      width: 300px;
+      height: 500px;
+      z-index: 2;
+      /* Toggle this class - hide and show the popup */
+      /* Add animation (fade in the popup) */ }
+      .modal-wrapper .modal-window .popup {
+        visibility: hidden;
+        width: 500px;
+        height: 467px;
+        background-color: #fff;
+        color: #45413e;
+        border-radius: 6px;
+        padding: 50px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 17%;
+        left: 32.5%;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 13px; }
+        .modal-wrapper .modal-window .popup h2 {
+          text-align: center;
+          font-size: 28px;
+          font-weight: bold; }
+        .modal-wrapper .modal-window .popup form {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around; }
+          .modal-wrapper .modal-window .popup form .labelAndInput {
+            width: 100%;
+            height: 20%;
+            margin: 20px;
+            margin-left: 0; }
+            .modal-wrapper .modal-window .popup form .labelAndInput label {
+              display: block;
+              margin-top: 10px;
+              margin-bottom: 10px;
+              position: relative; }
+              .modal-wrapper .modal-window .popup form .labelAndInput label a {
+                position: absolute;
+                right: 0; }
+            .modal-wrapper .modal-window .popup form .labelAndInput .input {
+              position: relative;
+              box-sizing: border-box; }
+              .modal-wrapper .modal-window .popup form .labelAndInput .input i.far {
+                position: absolute;
+                top: 33%;
+                right: 3%;
+                color: #afaead;
+                z-index: 1;
+                margin: 0; }
+            .modal-wrapper .modal-window .popup form .labelAndInput input {
+              border: 2px solid rgba(69, 65, 62, 0.2);
+              border-radius: 50px;
+              text-align: center;
+              height: 38px;
+              width: 100%; }
+          .modal-wrapper .modal-window .popup form button {
+            margin: 20px auto;
+            background-color: #84bc22;
+            color: #fff;
+            border: none; }
+        .modal-wrapper .modal-window .popup a {
+          text-align: center;
+          color: #84bc22; }
+      .modal-wrapper .modal-window .show {
+        visibility: visible;
+        z-index: 2;
+        -webkit-animation: fadeIn 0.5s;
+        animation: fadeIn 0.5s; }
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0; }
+    to {
+      opacity: 1; } }
+  @keyframes fadeIn {
+    from {
+      opacity: 0; }
+    to {
+      opacity: 1; } }
+  .darken {
+    visibility: visible !important; }
+  .cookieOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 11;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center; }
+    .cookieOverlay .cookieBody {
+      display: inline-block;
+      width: 90%;
+      min-height: 150px;
+      padding: 15px;
+      box-sizing: border-box;
+      background-color: white;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      position: relative; }
+      .cookieOverlay .cookieBody h3 {
+        font-weight: bold;
+        color: #84bc22;
+        margin-bottom: 10px; }
+      .cookieOverlay .cookieBody p {
+        font-size: 14px;
+        line-height: 21px;
+        width: 80%; }
+        .cookieOverlay .cookieBody p a {
+          color: #83bc22; }
+      .cookieOverlay .cookieBody a.close,
+      .cookieOverlay .cookieBody a.submit {
+        margin-top: 0;
+        display: inline-block;
+        color: white;
+        background-color: #84bc22;
+        text-decoration: none;
+        font-family: sans-serif; }
+        .cookieOverlay .cookieBody a.close:last-of-type,
+        .cookieOverlay .cookieBody a.submit:last-of-type {
+          margin-right: 0; }
+      .cookieOverlay .cookieBody a.close {
+        background-color: #fff;
+        color: #45413e;
+        font-size: 26px;
+        position: absolute;
+        top: 4px;
+        right: 6px; }
+      .cookieOverlay .cookieBody a.submit {
+        position: absolute;
+        bottom: 25px;
+        right: 25px;
+        padding-top: 10px;
+        box-sizing: border-box;
+        width: 148px;
+        height: 37px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-family: 'Lato', sans-serif;
+        text-align: center; } }
+
 body {
   margin: 0 auto;
   min-height: 100vh;
@@ -178,178 +352,6 @@ main {
   padding-top: 81px;
   min-height: 100vh;
   position: relative; }
-  main .modal-wrapper {
-    visibility: hidden;
-    position: fixed;
-    display: flex;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    margin-left: -56px;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 11; }
-    main .modal-wrapper .popupOverlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: 1; }
-    main .modal-wrapper .modal-window {
-      width: 300px;
-      height: 500px;
-      z-index: 2;
-      /* Toggle this class - hide and show the popup */
-      /* Add animation (fade in the popup) */ }
-      main .modal-wrapper .modal-window .popup {
-        visibility: hidden;
-        width: 500px;
-        height: 467px;
-        background-color: #fff;
-        color: #45413e;
-        border-radius: 6px;
-        padding: 50px;
-        box-sizing: border-box;
-        position: absolute;
-        top: 17%;
-        left: 32.5%;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        font-size: 13px; }
-        main .modal-wrapper .modal-window .popup h2 {
-          text-align: center;
-          font-size: 28px;
-          font-weight: bold; }
-        main .modal-wrapper .modal-window .popup form {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around; }
-          main .modal-wrapper .modal-window .popup form .labelAndInput {
-            width: 100%;
-            height: 20%;
-            margin: 20px;
-            margin-left: 0; }
-            main .modal-wrapper .modal-window .popup form .labelAndInput label {
-              display: block;
-              margin-top: 10px;
-              margin-bottom: 10px;
-              position: relative; }
-              main .modal-wrapper .modal-window .popup form .labelAndInput label a {
-                position: absolute;
-                right: 0; }
-            main .modal-wrapper .modal-window .popup form .labelAndInput .input {
-              position: relative;
-              box-sizing: border-box; }
-              main .modal-wrapper .modal-window .popup form .labelAndInput .input i.far {
-                position: absolute;
-                top: 33%;
-                right: 3%;
-                color: #afaead;
-                z-index: 1;
-                margin: 0; }
-            main .modal-wrapper .modal-window .popup form .labelAndInput input {
-              border: 2px solid rgba(69, 65, 62, 0.2);
-              border-radius: 50px;
-              text-align: center;
-              height: 38px;
-              width: 100%; }
-          main .modal-wrapper .modal-window .popup form button {
-            margin: 20px auto;
-            background-color: #84bc22;
-            color: #fff;
-            border: none; }
-        main .modal-wrapper .modal-window .popup a {
-          text-align: center;
-          color: #84bc22; }
-      main .modal-wrapper .modal-window .show {
-        visibility: visible;
-        z-index: 2;
-        -webkit-animation: fadeIn 0.5s;
-        animation: fadeIn 0.5s; }
-
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-
-@keyframes fadeIn {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-  main .darken {
-    visibility: visible !important; }
-  main .cookieOverlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 11;
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-    align-items: center;
-    justify-content: center; }
-    main .cookieOverlay .cookieBody {
-      display: inline-block;
-      width: 90%;
-      min-height: 150px;
-      padding: 25px;
-      box-sizing: border-box;
-      background-color: white;
-      border-radius: 8px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: space-between;
-      position: relative; }
-      main .cookieOverlay .cookieBody h3 {
-        font-weight: bold;
-        color: #84bc22;
-        margin-bottom: 10px; }
-      main .cookieOverlay .cookieBody p {
-        font-size: 14px;
-        line-height: 21px;
-        width: 80%; }
-      main .cookieOverlay .cookieBody a.close,
-      main .cookieOverlay .cookieBody a.submit {
-        margin-top: 0;
-        display: inline-block;
-        color: white;
-        background-color: #84bc22;
-        text-decoration: none;
-        font-family: sans-serif; }
-        main .cookieOverlay .cookieBody a.close:last-of-type,
-        main .cookieOverlay .cookieBody a.submit:last-of-type {
-          margin-right: 0; }
-      main .cookieOverlay .cookieBody a.close {
-        background-color: #fff;
-        color: #45413e;
-        font-size: 26px;
-        position: absolute;
-        top: 4px;
-        right: 6px; }
-      main .cookieOverlay .cookieBody a.submit {
-        position: absolute;
-        bottom: 25px;
-        right: 25px;
-        padding-top: 10px;
-        box-sizing: border-box;
-        width: 148px;
-        height: 37px;
-        border-radius: 50px;
-        cursor: pointer;
-        font-family: 'Lato', sans-serif;
-        text-align: center; }
 
 .slider-block {
   display: flex;
@@ -677,7 +679,7 @@ button:focus, input:focus {
     font-weight: 900;
     margin-bottom: 42px; }
   .banner p {
-    font-size: 12px; }
+    font-size: 13px; }
 
 .latest-posts {
   background-color: #262a32;
@@ -867,9 +869,7 @@ footer {
     color: #83bc22;
     transition: 0.4s; }
 
-@media (min-width: 768px) and (max-width: 1280px) {
-  body {
-    overflow-x: hidden; }
+@media (min-width: 768px) and (max-width: 1279px) {
   .menu-burger__header {
     width: 40px;
     height: 35px;
@@ -889,32 +889,6 @@ footer {
     bottom: -10px; }
   .menu-burger__header:before {
     top: 18px; }
-  .header-nav {
-    display: block;
-    position: absolute;
-    top: 81px;
-    left: -100%;
-    height: 400px;
-    width: 200px;
-    background: #262a32;
-    overflow: auto;
-    box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.17);
-    transition: all 0.4s ease; }
-    .header-nav .nav-item {
-      display: block;
-      color: #fff;
-      font-weight: bold;
-      padding: 15px; }
-    .header-nav .icons-block {
-      position: absolute;
-      bottom: 0; }
-      .header-nav .icons-block * {
-        font-size: 15px;
-        height: 42px; }
-  .header-nav.open-menu {
-    left: 0; }
-  .header-logo {
-    margin: auto; }
   .menu-burger__header.open-menu span {
     opacity: 0;
     transition: 0.5s; }
@@ -926,5 +900,104 @@ footer {
     transform: rotate(-38deg);
     bottom: 16px;
     transition: 0.4s; }
+  .header-nav.open-menu {
+    left: 0; }
+  .header-logo {
+    margin: auto; }
+  .header-nav {
+    display: block;
+    position: absolute;
+    padding-top: 10px;
+    width: 100%;
+    height: 100vh;
+    top: 81px;
+    left: -110%;
+    background: #262a32;
+    overflow: auto;
+    box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.17);
+    transition: all 0.4s ease; }
+    .header-nav .nav-item {
+      display: block;
+      color: #fff;
+      font-weight: bold;
+      padding: 15px; }
+    .header-nav .nav-item:nth-child(n + 5) {
+      display: none; }
+    .header-nav .dropdown-content {
+      position: absolute;
+      left: -2px;
+      top: 45px; }
+    .header-nav .dropdown:hover .dropdown-content .dropdown-container {
+      display: flex;
+      flex-direction: column;
+      flex-basis: auto;
+      font-size: 14px;
+      position: relative;
+      top: -40px; }
+    .header-nav .dropdown:hover .dropdown-content .dropdown-container strong {
+      font-size: 12px; }
+    .header-nav .dropdown:hover .dropdown-content .drowdown-img {
+      width: 200px; }
   .fixed-page {
-    overflow: hidden; } }
+    overflow: hidden; }
+  .slider-block {
+    width: 100%; }
+    .slider-block .slider-left {
+      margin: 0 auto;
+      height: 75vh;
+      box-sizing: border-box;
+      padding: 30px;
+      border-radius: 5px; }
+    .slider-block .slider-right {
+      display: none; }
+  .banner {
+    background-position-x: right; }
+  .latest-posts {
+    display: none; }
+  .services {
+    flex-direction: column;
+    justify-content: space-between; }
+    .services .service-block {
+      max-width: 700px;
+      width: 100%;
+      height: 90px;
+      margin: 10px auto; }
+      .services .service-block img {
+        transform: scale(0.8);
+        width: 80px; }
+      .services .service-block p {
+        width: 90%;
+        font-size: 13px; }
+      .services .service-block h3 {
+        font-size: 15px; }
+    .services .service-block:nth-child(even) {
+      position: relative; }
+      .services .service-block:nth-child(even) img {
+        position: absolute;
+        right: 0; }
+      .services .service-block:nth-child(even) div {
+        position: absolute;
+        left: 0; }
+  .icons-block {
+    background-color: #262a32;
+    width: 100vw;
+    height: fit-content;
+    margin-left: -56px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; }
+    .icons-block * {
+      font-size: 17px;
+      height: 42px;
+      color: #fff; }
+    .icons-block .nav-item .count {
+      background-color: #262a32;
+      width: 13px;
+      height: 13px;
+      top: 10px;
+      right: 15px;
+      font-size: 8px;
+      text-align: center;
+      border: 1px solid #84bc22; }
+    .icons-block .nav-item {
+      height: fit-content; } }

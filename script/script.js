@@ -194,22 +194,26 @@ $(document).ready(function() {
         lazyLoad:'ondemand',
         pauseOnHover:true,
         pauseOnFocus:true,
-        responsive: [{
-            breakpoint: 1280,
-            settings: {
-                slidesToShow: 4,
-                infinite: true
-            }
-        }, {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                dots: true
-            }
-        }, {
-            breakpoint: 320,
-            settings: "unslick" // destroys slick
-            }]            
+        // responsive: [{
+        //     breakpoint: 1280,
+        //     settings: {
+        //         slidesToShow: 4,
+        //         slidesPerRow: 4,
+        //         slidesToScroll: 4,
+        //         infinite: true
+        //     }
+        // }, {
+        //     breakpoint: 768,
+        //     settings: {
+        //         slidesToShow: 2,
+        //         slidesPerRow: 2,
+        //         slidesToScroll: 2,
+        //         dots: true
+        //     }
+        // }, {
+        //     breakpoint: 320,
+        //     settings: "unslick" // destroys slick
+        //     }]            
     });
 
 

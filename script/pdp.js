@@ -16,7 +16,6 @@ $(document).ready(function(){
 
     $('.bar-item').click(function(){
         let id = $(this).attr('class').split(' ', 1)[0];
-        console.log(id)
         let tab = $('.tab');
         for (let i = 0; i < tab.length; i++){
             tab[i].style.display = 'none';
