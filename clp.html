@@ -10,6 +10,7 @@
     <link rel="preconnect" type="text/css" href="https://fonts.gstatic.com"> 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="./dist/main.css">
     <link rel="stylesheet" type="text/css" href="./dist/404.css">
     <link rel="stylesheet" type="text/css" href="./dist/clp.css">
@@ -171,10 +172,10 @@
         <div class="breadcrumbs">
             <a href="./index.html">Home</a>
             <span class="separator"></span>/<span class="separator"></span>
-            <span>Category Landing Services</span>
+            <span>Category Landing</span>
         </div>
         <h1 id="pageName">Services</h1>
-
+        <span id="hideFilters" style="display: none;">Hide Filter</span>
         <div class="filters">
             <div class="filter">
                 <span>Price</span>
@@ -242,7 +243,7 @@
 
         <div class="products-block">
             <span>12,931 result in apparel</span>
-            <div class="items" id="productTmpl">
+            <div class="items-noSclick" id="productTmpl">
                 <div class="item">
                     <div class="img" id="item-1"></div>
                     <h4>Kristina Dam Oak Table With White Marble Top</h4>
@@ -412,6 +413,12 @@
             <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-pinterest-p"></i></a>
         </div>
     </footer>
+    <div class="icons-block" id="mob-nav" style="display: none;">
+        <i class="fas fa-search nav-item"></i>
+        <i class="far fa-user nav-item"></i>
+        <i class="far fa-heart nav-item"><span class="count" id="desiredItem">0</span></i>
+        <i class="fas fa-shopping-bag nav-item"><span class="count" id="cartItem">0</span></i>
+    </div>
 
     <script src="./script/script.js" type="text/javascript"></script>
     <script src="./script/clp.js" type="text/javascript"></script>

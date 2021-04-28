@@ -525,12 +525,12 @@ button:focus, input:focus {
     margin: 0 3em; }
   .products-block h3:not(:empty)::after {
     margin: 0 3em; }
-  .products-block .items {
+  .products-block .items, .products-block .items-noSclick {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center; }
-    .products-block .items .item, .products-block .items #specificItem, .products-block .items .static-item {
+    .products-block .items .item, .products-block .items #specificItem, .products-block .items .static-item, .products-block .items-noSclick .item, .products-block .items-noSclick #specificItem, .products-block .items-noSclick .static-item {
       width: 270px;
       height: 365px;
       background-color: #fff;
@@ -541,40 +541,40 @@ button:focus, input:focus {
       margin: 15px;
       border-radius: 10px;
       position: relative; }
-      .products-block .items .item .img, .products-block .items #specificItem .img, .products-block .items .static-item .img {
+      .products-block .items .item .img, .products-block .items #specificItem .img, .products-block .items .static-item .img, .products-block .items-noSclick .item .img, .products-block .items-noSclick #specificItem .img, .products-block .items-noSclick .static-item .img {
         height: 260px;
         border-top-left-radius: inherit;
         border-top-right-radius: inherit;
         background-repeat: no-repeat; }
-      .products-block .items .item #item-1, .products-block .items #specificItem #item-1, .products-block .items .static-item #item-1 {
+      .products-block .items .item #item-1, .products-block .items #specificItem #item-1, .products-block .items .static-item #item-1, .products-block .items-noSclick .item #item-1, .products-block .items-noSclick #specificItem #item-1, .products-block .items-noSclick .static-item #item-1 {
         background-image: url(../images/item-1.png); }
-      .products-block .items .item #item-2, .products-block .items #specificItem #item-2, .products-block .items .static-item #item-2 {
+      .products-block .items .item #item-2, .products-block .items #specificItem #item-2, .products-block .items .static-item #item-2, .products-block .items-noSclick .item #item-2, .products-block .items-noSclick #specificItem #item-2, .products-block .items-noSclick .static-item #item-2 {
         background-image: url(../images/item-2.png); }
-      .products-block .items .item #item-3, .products-block .items #specificItem #item-3, .products-block .items .static-item #item-3 {
+      .products-block .items .item #item-3, .products-block .items #specificItem #item-3, .products-block .items .static-item #item-3, .products-block .items-noSclick .item #item-3, .products-block .items-noSclick #specificItem #item-3, .products-block .items-noSclick .static-item #item-3 {
         background-image: url(../images/item-3.png); }
-      .products-block .items .item #item-4, .products-block .items #specificItem #item-4, .products-block .items .static-item #item-4 {
+      .products-block .items .item #item-4, .products-block .items #specificItem #item-4, .products-block .items .static-item #item-4, .products-block .items-noSclick .item #item-4, .products-block .items-noSclick #specificItem #item-4, .products-block .items-noSclick .static-item #item-4 {
         background-image: url(../images/item-4.png); }
-      .products-block .items .item #item-5, .products-block .items #specificItem #item-5, .products-block .items .static-item #item-5 {
+      .products-block .items .item #item-5, .products-block .items #specificItem #item-5, .products-block .items .static-item #item-5, .products-block .items-noSclick .item #item-5, .products-block .items-noSclick #specificItem #item-5, .products-block .items-noSclick .static-item #item-5 {
         background-image: url(../images/item-5.png); }
-      .products-block .items .item #item-6, .products-block .items #specificItem #item-6, .products-block .items .static-item #item-6 {
+      .products-block .items .item #item-6, .products-block .items #specificItem #item-6, .products-block .items .static-item #item-6, .products-block .items-noSclick .item #item-6, .products-block .items-noSclick #specificItem #item-6, .products-block .items-noSclick .static-item #item-6 {
         background-image: url(../images/item-6.png); }
-      .products-block .items .item #item-7, .products-block .items #specificItem #item-7, .products-block .items .static-item #item-7 {
+      .products-block .items .item #item-7, .products-block .items #specificItem #item-7, .products-block .items .static-item #item-7, .products-block .items-noSclick .item #item-7, .products-block .items-noSclick #specificItem #item-7, .products-block .items-noSclick .static-item #item-7 {
         background-image: url(../images/item-7.png); }
-      .products-block .items .item h4, .products-block .items #specificItem h4, .products-block .items .static-item h4 {
+      .products-block .items .item h4, .products-block .items #specificItem h4, .products-block .items .static-item h4, .products-block .items-noSclick .item h4, .products-block .items-noSclick #specificItem h4, .products-block .items-noSclick .static-item h4 {
         font-size: 14px;
         color: #2c3e50;
         margin: 0 auto;
         padding: 18px;
         text-align: center; }
-      .products-block .items .item span, .products-block .items #specificItem span, .products-block .items .static-item span {
+      .products-block .items .item span, .products-block .items #specificItem span, .products-block .items .static-item span, .products-block .items-noSclick .item span, .products-block .items-noSclick #specificItem span, .products-block .items-noSclick .static-item span {
         color: #011847;
         margin: 0 auto;
         padding-bottom: 20px; }
-    .products-block .items #specificItem .img {
+    .products-block .items #specificItem .img, .products-block .items-noSclick #specificItem .img {
       cursor: pointer; }
-    .products-block .items #specificItem h4 {
+    .products-block .items #specificItem h4, .products-block .items-noSclick #specificItem h4 {
       cursor: pointer; }
-    .products-block .items #specificItem #button {
+    .products-block .items #specificItem #button, .products-block .items-noSclick #specificItem #button {
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -586,22 +586,22 @@ button:focus, input:focus {
       box-sizing: border-box;
       border: 2px solid #e5e5e5;
       border-radius: 50px; }
-      .products-block .items #specificItem #button span {
+      .products-block .items #specificItem #button span, .products-block .items-noSclick #specificItem #button span {
         display: inline-block;
         box-sizing: border-box;
         padding-top: 12px;
         padding-bottom: 12px;
         cursor: pointer; }
-      .products-block .items #specificItem #button span:first-child {
+      .products-block .items #specificItem #button span:first-child, .products-block .items-noSclick #specificItem #button span:first-child {
         color: #24c36c;
         border-right: 1px solid #e5e5e5;
         min-width: 44%; }
-      .products-block .items #specificItem #button span:last-child {
+      .products-block .items #specificItem #button span:last-child, .products-block .items-noSclick #specificItem #button span:last-child {
         color: #000;
         font-weight: bold;
         border-left: 1px solid #e5e5e5;
         min-width: 56%; }
-    .products-block .items .item .overlay {
+    .products-block .items .item .overlay, .products-block .items-noSclick .item .overlay {
       position: absolute;
       top: 0;
       bottom: 0;
@@ -619,7 +619,7 @@ button:focus, input:focus {
       justify-content: center;
       padding: 22px;
       box-sizing: border-box; }
-      .products-block .items .item .overlay button {
+      .products-block .items .item .overlay button, .products-block .items-noSclick .item .overlay button {
         background-color: #fff;
         border: none;
         border-radius: 50%;
@@ -627,17 +627,17 @@ button:focus, input:focus {
         height: 90px;
         margin: 12px;
         align-self: center; }
-      .products-block .items .item .overlay button:hover {
+      .products-block .items .item .overlay button:hover, .products-block .items-noSclick .item .overlay button:hover {
         box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
         transition: 0.4s; }
-      .products-block .items .item .overlay .addToCart img {
+      .products-block .items .item .overlay .addToCart img, .products-block .items-noSclick .item .overlay .addToCart img {
         width: 29px; }
-      .products-block .items .item .overlay .addToWishlist img {
+      .products-block .items .item .overlay .addToWishlist img, .products-block .items-noSclick .item .overlay .addToWishlist img {
         width: 33px; }
-    .products-block .items .item:hover .overlay {
+    .products-block .items .item:hover .overlay, .products-block .items-noSclick .item:hover .overlay {
       opacity: 0.93;
       visibility: visible; }
-    .products-block .items .static-item {
+    .products-block .items .static-item, .products-block .items-noSclick .static-item {
       background-image: linear-gradient(to bottom, rgba(220, 89, 135, 0.85), rgba(103, 91, 153, 0.85)), url(../images/static-item.png);
       background-size: cover;
       background-position-x: right;
@@ -645,11 +645,11 @@ button:focus, input:focus {
       padding: 22px;
       box-sizing: border-box;
       position: relative; }
-      .products-block .items .static-item div {
+      .products-block .items .static-item div, .products-block .items-noSclick .static-item div {
         width: 130px;
         position: absolute;
         bottom: 22px; }
-        .products-block .items .static-item div p {
+        .products-block .items .static-item div p, .products-block .items-noSclick .static-item div p {
           margin: 8px;
           line-height: 17px; }
   .products-block #loadMore, .products-block #loadMore2 {
@@ -874,7 +874,7 @@ footer {
 
 @media (min-width: 768px) and (max-width: 1279px) {
   .menu-burger__header {
-    width: 40px;
+    width: 30px;
     height: 35px;
     position: relative; }
   .menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before {

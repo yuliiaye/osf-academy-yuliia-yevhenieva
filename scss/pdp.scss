@@ -206,10 +206,16 @@ main {
         scroll-behavior: smooth;
     }
     main {
+        padding: 81px 10px 0 10px;
         margin: 0;
-        padding: 0;
         body {
             padding: 0; 
+        }
+        h1#pageName {
+            font-size: 16px;
+        }
+        h1#pageName::after, h1#pageName::before {
+            border-bottom: none;
         }
         .products-block {
             display: none;
@@ -239,6 +245,8 @@ main {
             .posts {
                 .post {
                     background-color: #fff;
+                    position: relative;
+                    left: -10px;
                     margin: 20px;
                     height: auto;
                 }
@@ -247,6 +255,44 @@ main {
                 margin: 50px auto 0;
                 display: block;
             }
+        }
+        .productInfo {
+            .infoTop {
+                flex-direction: column;
+                padding: 5px;
+                .mainImg img {
+                    width: 100%;
+                }
+                .infoRightside {
+                    flex-direction: column !important;
+                    .setImg {
+                        flex-direction: row !important;
+                        img {
+                            width: 71px !important;
+                            margin: 12px;
+                        }
+                    }
+                    .desc {
+                        flex-direction: column;
+                        height: 350px !important;
+                        span#price {
+                            font-size: 30px !important;
+                        }
+                        #social-icons {
+                            width: 100vw !important;
+                            .social {
+                                margin: 0 auto !important;
+                            }
+                        }
+                    }
+                }
+            }
+            .infoBottom {
+                display: none;
+            }
+        }
+        .services {
+            margin: -10px;
         }
     }
 }

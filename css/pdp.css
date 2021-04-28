@@ -164,10 +164,14 @@ main .products-block h3:not(:empty)::after {
   html {
     scroll-behavior: smooth; }
   main {
-    margin: 0;
-    padding: 0; }
+    padding: 81px 10px 0 10px;
+    margin: 0; }
     main body {
       padding: 0; }
+    main h1#pageName {
+      font-size: 16px; }
+    main h1#pageName::after, main h1#pageName::before {
+      border-bottom: none; }
     main .products-block {
       display: none; }
     main .latest-posts {
@@ -190,8 +194,35 @@ main .products-block h3:not(:empty)::after {
         margin: 0 .5em; }
       main .latest-posts .posts .post {
         background-color: #fff;
+        position: relative;
+        left: -10px;
         margin: 20px;
         height: auto; }
       main .latest-posts .btnGreen {
         margin: 50px auto 0;
-        display: block; } }
+        display: block; }
+    main .productInfo .infoTop {
+      flex-direction: column;
+      padding: 5px; }
+      main .productInfo .infoTop .mainImg img {
+        width: 100%; }
+      main .productInfo .infoTop .infoRightside {
+        flex-direction: column !important; }
+        main .productInfo .infoTop .infoRightside .setImg {
+          flex-direction: row !important; }
+          main .productInfo .infoTop .infoRightside .setImg img {
+            width: 71px !important;
+            margin: 12px; }
+        main .productInfo .infoTop .infoRightside .desc {
+          flex-direction: column;
+          height: 350px !important; }
+          main .productInfo .infoTop .infoRightside .desc span#price {
+            font-size: 30px !important; }
+          main .productInfo .infoTop .infoRightside .desc #social-icons {
+            width: 100vw !important; }
+            main .productInfo .infoTop .infoRightside .desc #social-icons .social {
+              margin: 0 auto !important; }
+    main .productInfo .infoBottom {
+      display: none; }
+    main .services {
+      margin: -10px; } }

@@ -76,3 +76,33 @@ main {
       text-align: center; }
   main select:focus {
     outline: 0; }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  main {
+    margin: 0;
+    padding: 81px 10px 0 10px; }
+    main #hideFilters, main #showFilters {
+      color: #84bc22;
+      font-size: 14px;
+      display: block;
+      margin: 0 auto;
+      width: fit-content;
+      padding: 20px; }
+    main .filters {
+      flex-direction: column; }
+      main .filters .filter {
+        padding: 10px;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
+        main .filters .filter select {
+          width: 50%;
+          background-color: #fff; }
+    main .products-block {
+      margin: auto; }
+      main .products-block .items-noSclick {
+        position: relative;
+        right: 10px; }
+        main .products-block .items-noSclick .item:nth-child(n + 5) {
+          display: none; } }

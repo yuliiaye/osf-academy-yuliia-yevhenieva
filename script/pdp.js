@@ -5,7 +5,7 @@ $(document).ready(function(){
 
     $('.setImg img').click(function(){
         $('.setImg').children().removeClass('active');
-        $(this).addClass('active');
+        $(this).addClass('active'); 
 
         let id = $(this).attr('class').split(' ', 1)[0];
         console.log(id)
@@ -13,6 +13,17 @@ $(document).ready(function(){
         $(`.mainImg .${id}`).addClass('active');
     })
 
+    if ($(window).width() < 768 && $(window).width() >= 320) {
+        $('.setImg img').click(function(){
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active'); 
+    
+            let id = $(this).attr('class').split(' ', 1)[0];
+            console.log(id)
+            $('.mainImg').children().removeClass('active');
+            $(`.mainImg .${id}`).addClass('active');
+        })
+    }
 
     $('.bar-item').click(function(){
         let id = $(this).attr('class').split(' ', 1)[0];

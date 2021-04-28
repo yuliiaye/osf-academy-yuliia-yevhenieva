@@ -140,3 +140,17 @@ main {
         }
     }
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+    main {
+        margin: 0;
+        padding: 81px 10px 0 10px;
+        .main-block {
+            flex-direction: column;
+            padding: 10px;
+            .right-to-oops {
+                z-index: 2;
+            }
+        }
+    }
+}
