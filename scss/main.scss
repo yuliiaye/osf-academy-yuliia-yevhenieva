@@ -9,10 +9,6 @@ $grey: #afaead;
     justify-content: space-around;
 }
 
-@media (min-width: 1280px) {
-
-}
-
 .modal-wrapper {
     visibility: hidden;
     position:fixed;
@@ -302,7 +298,6 @@ i {
             position: absolute;
             top: 9px;
             right: 13px;
-            // display: inline-block;
             color: $nav-item-border;
             height: 18px;
             width: 18px;
@@ -1161,7 +1156,6 @@ footer {
     .slider-block {
         width: 100%;
         .slider-left {
-            // transform: scale(0.9);
             margin: 0 auto;
             height: 75vh;
             box-sizing: border-box;
@@ -1172,13 +1166,6 @@ footer {
             display: none;
         }
     }
-    // .products-block {
-    //     .items {
-    //         .item, #specificItem, .static-item {
-    //             transform: scale(0.7);
-    //         }
-    //     }
-    // }
     .banner {
         background-position-x: right;
     }
@@ -1365,9 +1352,6 @@ footer {
             left: -15px;
             top: 45px;
             width: 100vw;
-            .drowdown-img {
-                // display: none;
-            }
         }
         .dropdown-container a{
             display: none;
@@ -1506,8 +1490,6 @@ footer {
         width: 100vw;
         height: fit-content;
         margin-left: 0;
-        // position: relative;
-        // bottom: -70%;
         display: flex;
         flex-direction: row;
         justify-content: space-around;

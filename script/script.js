@@ -1,5 +1,3 @@
-//php_value display_errors 1
-
 $(document).ready(function() {
     
     $('#cartItem').html($.cookie('productsInCart'));
@@ -197,8 +195,6 @@ $(document).ready(function() {
             console.log('item was added to cart')
         })
     }
-
-
 
     $('#currentYear').html(new Date().getFullYear())
 });

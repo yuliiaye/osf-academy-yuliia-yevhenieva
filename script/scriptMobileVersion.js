@@ -75,9 +75,6 @@ $(document).ready(function(){
     }
     if ($(window).width() < 768 && $(window).width() >= 320){
         $('#mob-nav').show();
-        // $('.popup').css('transform', 'scale(0.8)').css('top', '10%').css('left', '18%');
-        // $('.popup').css('width', '300px').css('height', '380px').css('position', 'static').css('tranform', 'scale(0.7)').css('padding', '25px');
-        // $('.popup form').css('height', '80%')
         $('.cookieOverlay').css('box-sizing', 'border-box')
         $('.cookieBody').css('width', '90%').css('height', '60vh').css('justify-content', 'flex-start').css('margin-left', '-25px').css('margin', '0 auto');
         $('.cookieBody p').css('width', '100%');
