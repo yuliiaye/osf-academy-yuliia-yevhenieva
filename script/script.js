@@ -65,54 +65,11 @@ $(document).ready(function() {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     }
 
-    
-
-    $(document).on('click', '.addToCart', function() {
-        let amount = $.cookie('productsInCart');
-        if (!amount) {
-            setCookie( 'productsInCart', 1, .041666666666667 );
-            $('#cartItem').text(1);
-        } else {
-            amount++;
-            setCookie( 'productsInCart', amount, .041666666666667 );
-        }
-        $('#cartItem').text(amount);
-        console.log('item was added to cart')
-    })
-    $(document).on('click', '.addToWishlist', function() {
-        let desired = $.cookie('productsInWishlist');
-        if (!desired) {
-            setCookie( 'productsInWishlist', 1, .041666666666667 );
-            $('#desiredItem').text(1);
-        } else {
-            desired++;
-            setCookie( 'productsInWishlist', desired, .041666666666667 );
-        }
-        $('#desiredItem').text(desired);
-        console.log('item was added to cart')
-    })
-
-
-
-    $('#btnGreen').click(function(){
-        let val = $('.inputAmount').val();
-        let amount = $.cookie('productsInCart');
-        if (!amount) {
-            setCookie( 'productsInCart', val, .041666666666667 );
-            $('#cartItem').text(val);
-        } else { 
-            newAmount = parseInt(amount) + parseInt(val);
-            setCookie( 'productsInCart', newAmount, .041666666666667 );
-        }
-        $('#cartItem').text(newAmount);
-        console.log('item was added to cart')
-    })
-
 
 
     $('#specificItem .img, #specificItem h4, #specificItem #button span:first-child').click(function(e){
         e.preventDefault();
-        window.location = 'https://my-project-osf.000webhostapp.com/';    
+        window.location = 'https://my-project-osf.000webhostapp.com/pdp.html';    
     });
     
     $('#viewMore').click(function(e){
@@ -179,6 +136,7 @@ $(document).ready(function() {
 
 
     if ($(window).width() > 768){
+
         $('.posts').slick({
             prevArrow:$('.btn-left'),
             nextArrow:$('.btn-right'),
@@ -197,19 +155,50 @@ $(document).ready(function() {
             pauseOnHover:true,
             pauseOnFocus:true,        
         });
+
+        $(document).on('click', '.addToCart', function() {
+            let amount = $.cookie('productsInCart');
+            if (!amount) {
+                setCookie( 'productsInCart', 1, .041666666666667 );
+                $('#cartItem').text(1);
+            } else {
+                amount++;
+                setCookie( 'productsInCart', amount, .041666666666667 );
+            }
+            $('#cartItem').text(amount);
+            console.log('item was added to cart')
+        })
+        $(document).on('click', '.addToWishlist', function() {
+            let desired = $.cookie('productsInWishlist');
+            if (!desired) {
+                setCookie( 'productsInWishlist', 1, .041666666666667 );
+                $('#desiredItem').text(1);
+            } else {
+                desired++;
+                setCookie( 'productsInWishlist', desired, .041666666666667 );
+            }
+            $('#desiredItem').text(desired);
+            console.log('item was added to cart')
+        })
+    
+    
+    
+        $('#btnGreen').click(function(){
+            let val = $('.inputAmount').val();
+            let amount = $.cookie('productsInCart');
+            if (!amount) {
+                setCookie( 'productsInCart', val, .041666666666667 );
+                $('#cartItem').text(val);
+            } else { 
+                let newAmount = parseInt(amount) + parseInt(val);
+                setCookie( 'productsInCart', newAmount, .041666666666667 );
+            }
+            $('#cartItem').text(newAmount);
+            console.log('item was added to cart')
+        })
     }
 
 
 
     $('#currentYear').html(new Date().getFullYear())
-
-
-
-    /////////////////////for mobile adapptiveness\\\\\\\\\\\\\\\\\\\\\\\
-
-    $('.menu-burger__header').click(function() {
-        $('.menu-burger__header').toggleClass('open-menu');
-        $('.header-nav').toggleClass('open-menu');
-        $('body').toggleClass('fixed-page');
-    });
 });

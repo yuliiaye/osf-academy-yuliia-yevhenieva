@@ -29,7 +29,8 @@ $(document).ready(function(){
     }
 
     $('.btnGreen').click(function(){
-        $('.item:nth-child(-n + 8)').show();
+        $('.item:nth-child(-n + 8)').show().css('justify-content', 'space-between');
+        $('.item:nth-child(-n + 8) span').css('margin', '0 auto').css('display', 'block').css('width', '50.52px')
     })
 
     $('.color-pagination span').click(function(){

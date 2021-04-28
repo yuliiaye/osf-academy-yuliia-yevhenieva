@@ -15,5 +15,5 @@ main .main-block .right-to-oops .input{position:relative;box-sizing:border-box}m
 main .main-block .right-to-oops .input input{border:2px solid #f1edea;border-radius:50px;display:inline-block;padding:7px;width:90%;margin:0}
 main .main-block .right-to-oops .input input:focus{outline:0}@media(min-width:768px) and (max-width:1279px){.main-block{transform:scale(0.8)}
 .main-block .oops{transform:scale(0.8)}.main-block span{transform:scale(0.8)}}@media(min-width:320px) and (max-width:767px){main{margin:0;padding:81px 10px 0 10px}
-main .main-block{flex-direction:column;padding:10px}main .main-block .right-to-oops{z-index:2}
-}
+main .main-block{flex-direction:column;padding:10px}main .main-block span{font-size:62px}
+main .main-block .right-to-oops{z-index:2}}

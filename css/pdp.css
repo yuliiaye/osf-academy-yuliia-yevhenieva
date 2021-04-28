@@ -176,7 +176,7 @@ main .products-block h3:not(:empty)::after {
       display: none; }
     main .latest-posts {
       width: 100vw;
-      margin-left: 0;
+      margin: -10px;
       color: #45413e;
       background-color: inherit; }
       main .latest-posts h2 {
@@ -195,7 +195,6 @@ main .products-block h3:not(:empty)::after {
       main .latest-posts .posts .post {
         background-color: #fff;
         position: relative;
-        left: -10px;
         margin: 20px;
         height: auto; }
       main .latest-posts .btnGreen {

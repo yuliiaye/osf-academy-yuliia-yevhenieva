@@ -222,7 +222,7 @@ main {
         }
         .latest-posts {
             width: 100vw;
-            margin-left: 0;
+            margin: -10px;
             color: rgb(69, 65, 62);
             background-color: inherit;
             h2 {
@@ -246,7 +246,7 @@ main {
                 .post {
                     background-color: #fff;
                     position: relative;
-                    left: -10px;
+                    // left: -10px;
                     margin: 20px;
                     height: auto;
                 }

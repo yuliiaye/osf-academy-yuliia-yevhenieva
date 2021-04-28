@@ -757,9 +757,11 @@ button:focus, input:focus {
             }
             .addToCart img {
                 width: 29px;
+                margin: 0 auto;
             }
             .addToWishlist img {
                 width: 33px;
+                margin: 0 auto;
             }
         }
         .item:hover .overlay{
@@ -1245,26 +1247,45 @@ footer {
 }
 
 @media(min-width: 320px) and (max-width: 767px){
-    // html {
-    //     overflow-x: hidden;
-    // }
+    html {
+        overflow-x: hidden;
+        width: 100vw;
+    }
+    body {
+        padding: 0;
+    }
+    main {
+        margin: 0;
+        padding: 81px 10px 0;
+    }
     .container {
         width: 100%;
         box-sizing: border-box;
+        padding-bottom: 13px;
+        .header-logo {
+            a {
+                img {
+                    width: 46px;
+                    height: 46px;
+                    object-fit: cover;
+                    object-position: left;
+                }
+            }
+        }
     }
     .modal-wrapper {
-        margin-left: 0px;
+        margin-left: -10px;
         width: 100vw;
         height: 100vh;
         .modal-window {
             width: 100vw;
             height: 100vh;
             .popup {
-                margin: auto;
-                width: 300px;
+                margin: 20px auto;
+                width: 310px;
                 height: 380px;
                 position: static;
-                transform: scale(0.7);
+                transform: scale(0.85);
                 padding: 25px;
                 form {
                     height: 80%;
@@ -1287,16 +1308,16 @@ footer {
         left: -41px;
     }
     .menu-burger__header span{
-        top: 30px;
+        top: 23px;
     }
     .menu-burger__header:after, .menu-burger__header:before{
         content: '';
     }
     .menu-burger__header:after{
-        bottom: -10px;
+        bottom: -2px;
     }
     .menu-burger__header:before{
-        top: 18px;
+        top: 12px;
     }
     .menu-burger__header.open-menu span {
         opacity: 0;
@@ -1324,7 +1345,7 @@ footer {
         padding-top: 10px;
         width: 100%;
         height: 100vh;
-        top: 81px;
+        top: 75px;
         left: -110%;
         background: $nav-items-bgd;
         overflow: auto;
@@ -1345,7 +1366,7 @@ footer {
             top: 45px;
             width: 100vw;
             .drowdown-img {
-                display: none;
+                // display: none;
             }
         }
         .dropdown-container a{
@@ -1362,7 +1383,7 @@ footer {
             align-items: flex-start;
             padding-left: 15px;
             position: relative;
-            height: auto;
+            height: 100vh;
             top: 60px;
             .dropdown-container {
                 display: flex;
@@ -1381,7 +1402,8 @@ footer {
                 font-size: 12px;
             }
             .drowdown-img {
-                width: 200px;
+                width: 100vw;
+                margin: 0 auto;
             }
         }
     }
@@ -1391,7 +1413,7 @@ footer {
     }
 
     .products-block {
-        margin-left: 0;
+        margin: -10px;
         h3 {
             font-size: 16px;
             padding: 0;
@@ -1408,9 +1430,8 @@ footer {
             margin: 2em 1em;
         }
         .items {
-            .item {
-                // width: 300px !important;
-                // left: -50px;
+            .overlay {
+                outline: 0;
             }
             .slick-track {
                 position: relative;
@@ -1425,6 +1446,59 @@ footer {
             display: none;
         }
         
+    }
+
+    .slider-block {
+        width: 90vw;
+        margin: -10px;
+        padding: 15px;
+        .slider-left {
+            width: 100%;
+            padding: 15px;
+            border-radius: 5px;
+            h1 {
+                font-size: 20px;
+                font-weight: bold;
+                line-height: 27px;
+            }
+        }
+        .slider-right {
+            display: none;
+        }
+    }
+
+    .banner {
+        height: 185px;
+        width: 100vw;
+        background-position-x: right;
+        margin: -10px;
+    }
+
+    .services {
+        box-sizing: border-box;
+        flex-direction: column;
+        padding: 20px;
+        width: 100vw;
+        margin: -10px;
+        .service-block {
+            width: 100%;
+            height: 90px;
+            margin: 30px;
+            p {
+                width: 60%;
+            }
+        }
+        .service-block:nth-child(even) {
+            position: relative;
+            img {
+                position: absolute;
+                right: 20px;
+            }
+            div {
+                position: absolute;
+                left: 0;
+            }
+        }
     }
 
     #mob-nav {
@@ -1464,6 +1538,7 @@ footer {
             padding-bottom: 24.5px;
         }
     }
+    
     footer {
         padding: 15px;
         margin-left: 0;
@@ -1490,59 +1565,6 @@ footer {
             * {
                 padding: 8px;
                 font-size: 16px;
-            }
-        }
-    }
-    body {
-        padding: 0;
-    }
-    .slider-block {
-        width: 90vw;
-        .slider-left {
-            width: 100%;
-            padding: 15px;
-            border-radius: 5px;
-            h1 {
-                font-size: 20px;
-                font-weight: bold;
-                line-height: 27px;
-            }
-        }
-        .slider-right {
-            display: none;
-        }
-    }
-
-    .banner {
-        height: 185px;
-        width: 100vw;
-        background-position-x: right;
-        margin-left: 0;
-    }
-
-    .services {
-        box-sizing: border-box;
-        flex-direction: column;
-        padding: 20px;
-        width: 100vw;
-        margin: 0;
-        .service-block {
-            width: 100%;
-            height: 90px;
-            margin: 30px;
-            p {
-                width: 60%;
-            }
-        }
-        .service-block:nth-child(even) {
-            position: relative;
-            img {
-                position: absolute;
-                right: 20px;
-            }
-            div {
-                position: absolute;
-                left: 0;
             }
         }
     }

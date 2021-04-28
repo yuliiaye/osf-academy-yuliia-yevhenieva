@@ -148,6 +148,9 @@ main {
         .main-block {
             flex-direction: column;
             padding: 10px;
+            span {
+                font-size: 62px;
+            }
             .right-to-oops {
                 z-index: 2;
             }
