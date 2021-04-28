@@ -719,20 +719,20 @@ button:focus, input:focus {
     .latest-posts .btn .btn-right {
       top: -5px;
       right: -30px; }
-  .latest-posts h3 {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    display: flex;
-    align-items: center; }
-  .latest-posts h3::before, .latest-posts h3::after {
-    content: '';
-    flex: 1;
-    border-bottom: 2px solid white; }
-  .latest-posts h3:not(:empty)::before {
-    margin: .5em; }
-  .latest-posts h3:not(:empty)::after {
-    margin: .5em; }
+    .latest-posts .btn h3 {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      display: flex;
+      align-items: center; }
+    .latest-posts .btn h3::before, .latest-posts .btn h3::after {
+      content: '';
+      flex: 1;
+      border-bottom: 2px solid white; }
+    .latest-posts .btn h3:not(:empty)::before {
+      margin: .5em; }
+    .latest-posts .btn h3:not(:empty)::after {
+      margin: .5em; }
   .latest-posts .posts {
     display: flex;
     flex-direction: row;
@@ -1006,6 +1006,25 @@ footer {
       height: fit-content; } }
 
 @media (min-width: 320px) and (max-width: 767px) {
+  .container {
+    width: 100%;
+    box-sizing: border-box; }
+  .modal-wrapper {
+    margin-left: 0px;
+    width: 100vw;
+    height: 100vh; }
+    .modal-wrapper .modal-window {
+      width: 100vw;
+      height: 100vh; }
+      .modal-wrapper .modal-window .popup {
+        margin: auto;
+        width: 300px;
+        height: 380px;
+        position: static;
+        transform: scale(0.7);
+        padding: 25px; }
+        .modal-wrapper .modal-window .popup form {
+          height: 80%; }
   .menu-burger__header {
     width: 30px;
     height: 35px;
@@ -1099,6 +1118,25 @@ footer {
     display: none; }
   .products-block {
     margin-left: 0; }
+    .products-block h3 {
+      font-size: 16px;
+      padding: 0; }
+    .products-block h3::before, .products-block h3::after {
+      content: '';
+      flex: 1;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1); }
+    .products-block h3:not(:empty)::before {
+      margin: 2em 1em; }
+    .products-block h3:not(:empty)::after {
+      margin: 2em 1em; }
+    .products-block .items .slick-track {
+      position: relative;
+      margin: auto;
+      left: 22px; }
+    .products-block .items button:before {
+      color: #fff; }
+    .products-block #loadMore, .products-block #loadMore {
+      display: none; }
   #mob-nav {
     background-color: #262a32;
     width: 100vw;

@@ -10,7 +10,7 @@ $grey: #afaead;
 }
 
 @media (min-width: 1280px) {
-    
+
 }
 
 .modal-wrapper {
@@ -94,10 +94,10 @@ $grey: #afaead;
                     input {
                         border: 2px solid rgba(69, 65, 62, 0.2);
                         border-radius: 50px;
-                        text-align: center; 
+                        text-align: center;
                         height: 38px;
                         width: 100%;
-                    } 
+                    }
                 }
                 button {
                     margin: 20px auto;
@@ -111,7 +111,7 @@ $grey: #afaead;
                 color: $nav-item-border;
             }
         }
-          
+
         /* Toggle this class - hide and show the popup */
         .show {
             visibility: visible;
@@ -119,13 +119,13 @@ $grey: #afaead;
             -webkit-animation: fadeIn 0.5s;
             animation: fadeIn 0.5s;
         }
-        
+
         /* Add animation (fade in the popup) */
         @-webkit-keyframes fadeIn {
-            from {opacity: 0;} 
+            from {opacity: 0;}
             to {opacity: 1;}
         }
-        
+
         @keyframes fadeIn {
             from {opacity: 0;}
             to {opacity:1 ;}
@@ -488,7 +488,7 @@ main {
     transition:0.7s;
     h1, p {
         text-align: right;
-        
+
     }
     button {
         align-self: flex-end;
@@ -616,7 +616,7 @@ button:focus, input:focus {
         text-align: center;
         padding: 30px 0;
         display: flex;
-        align-items: center;     
+        align-items: center;
     }
     h3::before, h3::after {
         content: '';
@@ -733,7 +733,7 @@ button:focus, input:focus {
             background-image: linear-gradient(90deg, rgb(28,193,103) 0%, rgb(46,211,162) 100%);
             border-radius: inherit;
             z-index: 9;
-            opacity: 0;  
+            opacity: 0;
             visibility: hidden;
             width: 100%;
             display: flex;
@@ -767,7 +767,7 @@ button:focus, input:focus {
             visibility: visible;
         }
         .static-item {
-            background-image: 
+            background-image:
             linear-gradient(to bottom, rgba(220, 89, 135, 0.85), rgba(103,91,153, 0.85)),
             url(../images/static-item.png);
             background-size: cover;
@@ -865,24 +865,24 @@ button:focus, input:focus {
             top: -5px;
             right: -30px;
         }
-    }
-    h3 {
-        font-size: 20px;
-        font-weight: bold;
-        text-align: center;
-        display: flex;
-        align-items: center;   
-    }
-    h3::before, h3::after {
-        content: '';
-        flex: 1;
-        border-bottom: 2px solid rgb(255, 255, 255);
-    }
-    h3:not(:empty)::before {
-        margin: .5em;
-    }
-    h3:not(:empty)::after {
-        margin: .5em;
+        h3 {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+        h3::before, h3::after {
+            content: '';
+            flex: 1;
+            border-bottom: 2px solid rgb(255, 255, 255);
+        }
+        h3:not(:empty)::before {
+            margin: .5em;
+        }
+        h3:not(:empty)::after {
+            margin: .5em;
+        }
     }
     .posts {
         display: flex;
@@ -1091,8 +1091,8 @@ footer {
         top: 18px;
     }
     .menu-burger__header.open-menu span {
-        opacity: 0; 
-        transition: 0.5s; 
+        opacity: 0;
+        transition: 0.5s;
     }
     .menu-burger__header.open-menu:before {
         transform: rotate(38deg);
@@ -1136,7 +1136,7 @@ footer {
             left: -2px;
             top: 45px;
         }
-        .dropdown:hover .dropdown-content { 
+        .dropdown:hover .dropdown-content {
             .dropdown-container {
                 display: flex;
                 flex-direction: column;
@@ -1245,6 +1245,34 @@ footer {
 }
 
 @media(min-width: 320px) and (max-width: 767px){
+    // html {
+    //     overflow-x: hidden;
+    // }
+    .container {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .modal-wrapper {
+        margin-left: 0px;
+        width: 100vw;
+        height: 100vh;
+        .modal-window {
+            width: 100vw;
+            height: 100vh;
+            .popup {
+                margin: auto;
+                width: 300px;
+                height: 380px;
+                position: static;
+                transform: scale(0.7);
+                padding: 25px;
+                form {
+                    height: 80%;
+                }
+            }
+        }
+    }
+
     .menu-burger__header {
         width: 30px;
         height: 35px;
@@ -1271,8 +1299,8 @@ footer {
         top: 18px;
     }
     .menu-burger__header.open-menu span {
-        opacity: 0; 
-        transition: 0.5s; 
+        opacity: 0;
+        transition: 0.5s;
     }
     .menu-burger__header.open-menu:before {
         transform: rotate(38deg);
@@ -1328,7 +1356,7 @@ footer {
             top: -30px;
             padding-top: 15px;
         }
-        .dropdown:hover .dropdown-content { 
+        .dropdown:hover .dropdown-content {
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
@@ -1364,6 +1392,39 @@ footer {
 
     .products-block {
         margin-left: 0;
+        h3 {
+            font-size: 16px;
+            padding: 0;
+        }
+        h3::before, h3::after {
+            content: '';
+            flex: 1;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        h3:not(:empty)::before {
+            margin: 2em 1em;
+        }
+        h3:not(:empty)::after {
+            margin: 2em 1em;
+        }
+        .items {
+            .item {
+                // width: 300px !important;
+                // left: -50px;
+            }
+            .slick-track {
+                position: relative;
+                margin: auto;
+                left: 22px;
+            }
+            button:before {
+                color: #fff;
+            }
+        }
+        #loadMore, #loadMore {
+            display: none;
+        }
+        
     }
 
     #mob-nav {

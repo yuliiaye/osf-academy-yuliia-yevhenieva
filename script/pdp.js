@@ -1,7 +1,7 @@
 $(document).ready(function(){
    $('.descText').multiTextToggleCollapse({
        line: 3
-   });
+   })
 
     $('.setImg img').click(function(){
         $('.setImg').children().removeClass('active');
@@ -27,4 +27,8 @@ $(document).ready(function(){
         $(this).siblings().removeClass('active');
         $(this).addClass('active')
     })
+
+    if ($(window).width() >= 320 && $(window).width() < 768) {
+        $('.latest-posts').show();
+    }
 });

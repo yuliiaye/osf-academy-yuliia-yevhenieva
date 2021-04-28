@@ -25,3 +25,10 @@ main .productInfo .infoBottom .tab{background:#262a33;color:#fff;font-size:14px;
 main .products-block h3{text-transform:uppercase;color:#45413e}main .products-block h3{font-size:18px;font-weight:bold;font-weight:bold;text-align:center;padding:30px 0;display:flex;align-items:center}
 main .products-block h3::before,main .products-block h3::after{content:'';flex:1;border-bottom:2px solid #e5e2df}
 main .products-block h3:not(:empty)::before{margin-right:1em}main .products-block h3:not(:empty)::after{margin-left:1em}
+@media(min-width:320px) and (max-width:767px){html{scroll-behavior:smooth}main{margin:0;padding:0}
+main body{padding:0}main .products-block{display:none}main .latest-posts{width:100vw;margin-left:0;color:#45413e;background-color:inherit}
+main .latest-posts h2{text-align:center;font-weight:bold;font-size:18px;width:auto}
+main .latest-posts h2::before,main .latest-posts h2::after{content:'';flex:1;border-bottom:2px solid white}
+main .latest-posts h2:not(:empty)::before{margin:0 .5em}main .latest-posts h2:not(:empty)::after{margin:0 .5em}
+main .latest-posts .posts .post{background-color:#fff;margin:20px;height:auto}main .latest-posts .btnGreen{margin:50px auto 0;display:block}
+}
